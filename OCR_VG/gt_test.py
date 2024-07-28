@@ -51,22 +51,31 @@ def draw(final_box,final_text,img,height,width):
         img = cv2ImgAddText(img, text, left_top[0], left_top[1], (75, 0 , 130), 20)
 
     # 在屏幕上显示带有矩形框的图片
-    cv2.imwrite(os.path.join(out_path,'draw_img.jpg'), img, [cv2.IMWRITE_JPEG_QUALITY, 90])
+    cv2.imwrite(os.path.join(out_path,pic_path.split('/')[-1]), img, [cv2.IMWRITE_JPEG_QUALITY, 90])
     return
+def get_pic_path(dir):
+    if os.path.isdir(image_path):
+        jpg_files = []
+        for root, dirs, files in os.walk(dir):
+            for file in files:
+                if file.endswith('.jpg'):
+                    jpg_files.append(os.path.join(root, file))
+    else:
+        jpg_files = [image_path]
+    return jpg_files
 if __name__ == '__main__':
-    image_path='/root/ld/ld_dataset/2022_12_SCUT-HCCDoc_Val/Chinese/img/012148.jpg' # 测试图片路径
-    out_path='./' #输出图片保存文件夹
+    image_path='/root/ld/ld_dataset/2022_12_SCUT-HCCDoc_Val/5pi_德法西意印英' # 测试图片路径
+    out_path='/root/ld/ld_project/MIniCPM_Series_Tutorial/OCR_VG/out' #输出图片保存文件夹
     chat_model = MiniCPMVChat('/root/ld/ld_project/MiniCPM-V/finetune/output/merge_MiniCPM-Llama3-V-2_5') # 模型路径
-
-    im_64 = img2base64(image_path)
-
-    # First round chat 
-    msgs = [{"role": "user", "content": "识别图中的文字,并且输出位置"}]
-
-    inputs = {"image": im_64, "question": json.dumps(msgs)}
-    answer = chat_model.chat(inputs)
-    img = cv2.imread(image_path)
-    height, width = img.shape[:2]
-    format_output=parse_text(answer)
-    final_text,final_box = [list(i.keys())[0] for i in format_output ],[list(i.values())[0] for i in format_output]
-    draw(final_box,final_text,img,height,width)
+    pic_path_list=get_pic_path(image_path)
+    for pic_path in pic_path_list:
+        im_64 = img2base64(pic_path)
+        # First round chat 
+        msgs = [{"role": "user", "content": "识别图中的文字,并且输出位置"}]
+        inputs = {"image": im_64, "question": json.dumps(msgs)}
+        answer = chat_model.chat(inputs)
+        img = cv2.imread(pic_path)
+        height, width = img.shape[:2]
+        format_output=parse_text(answer)
+        final_text,final_box = [list(i.keys())[0] for i in format_output ],[list(i.values())[0] for i in format_output]
+        draw(final_box,final_text,img,height,width)
