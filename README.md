@@ -13,3 +13,10 @@ https://space.bilibili.com/669720247?spm_id_from=333.1007.0.0
 b站up名称：
 
 面壁的车辆工程师
+
+## 有趣的项目
+
+### OCR_VG
+同时将OCR和定位任务融合，考虑排版问题，该项目在OCR_VG的文件夹下，在可以自取[教程](https://modelbest.feishu.cn/wiki/D2tFw8Pcsi5CIzkaHNacLK64npg?from=from_copylink)。以下是项目效果
+![alt text](OCR_VG/out/0302.jpg)
+![alt text](OCR_VG/out/006379.jpg)
