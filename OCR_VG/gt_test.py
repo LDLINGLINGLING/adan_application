@@ -48,7 +48,7 @@ def draw(final_box,final_text,img,height,width):
         text = final_text[r_index]  # 要显示的文字
         text='\n'.join([text[i:i+40] for i in range(0, len(text), 40)])
         #text = "开头五字"+text[:5]+"结尾五字"+text[-5:] if len(text)>10 else text
-        img = cv2ImgAddText(img, text, left_top[0], left_top[1], (75, 0 , 130), 20)
+        img = cv2ImgAddText(img, text, left_top[0], left_top[1], (75, 0 , 130), 30)
 
     # 在屏幕上显示带有矩形框的图片
     cv2.imwrite(os.path.join(out_path,pic_path.split('/')[-1]), img, [cv2.IMWRITE_JPEG_QUALITY, 90])
@@ -64,10 +64,13 @@ def get_pic_path(dir):
         jpg_files = [image_path]
     return jpg_files
 if __name__ == '__main__':
-    image_path='/root/ld/ld_dataset/2022_12_SCUT-HCCDoc_Val/5pi_德法西意印英' # 测试图片路径
+    image_path='/root/ld/ld_project/MIniCPM_Series_Tutorial/OCR_VG/input' # 测试图片路径
     out_path='/root/ld/ld_project/MIniCPM_Series_Tutorial/OCR_VG/out' #输出图片保存文件夹
     chat_model = MiniCPMVChat('/root/ld/ld_project/MiniCPM-V/finetune/output/merge_MiniCPM-Llama3-V-2_5') # 模型路径
     pic_path_list=get_pic_path(image_path)
+    # with open('/root/ld/ld_dataset/2022_12_SCUT-HCCDoc_Val/vg_box_test.json', 'r') as file:
+    #     data = json.load(file)
+    #     pic_path_list=[i["image"] for i in data]    
     for pic_path in pic_path_list:
         im_64 = img2base64(pic_path)
         # First round chat 
