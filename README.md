@@ -19,8 +19,8 @@ b站up名称：
 
 ### OCR_VG
 同时将OCR和定位任务融合，考虑排版问题，该项目在OCR_VG的文件夹下，在可以自取[文字识别与定位教程](https://modelbest.feishu.cn/wiki/D2tFw8Pcsi5CIzkaHNacLK64npg?from=from_copylink)。以下是项目效果
-![alt text](OCR_VG/out/1.jpg)
-![alt text](OCR_VG/out/4.jpg)
+![alt text](./OCR_VG/out/1.jpg)
+![alt text](./OCR_VG/out/4.jpg)
 
 ### 混合模态微调
 MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯文本和图文对的混合训练模式，放在了MIniCPM_Series_Tutorial/ft_language_replace_file文件夹下，可以自取[混合模态微调教程](https://modelbest.feishu.cn/wiki/Y1NbwYijHiuiqvkSf0jcUOvFnTe?from=from_copylink)
@@ -29,6 +29,6 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
 但是对于应用来说，mllm并不需要十项全能的语言能力，更多的是在有优秀的多模态能力下保持基础问答以及某一个领域的专业的回复能力。
 
 ### 4g显存玩转rag
-![alt text](4G_memory_rag/image.png)
-![alt text](4G_memory_rag/image1.png)
+![alt text](./4G_memory_rag/image.png)
+![alt text](./4G_memory_rag/image1.png)
 这个没什么好解释的，可以在极低显存下运行rag，教程自取[RAG](https://modelbest.feishu.cn/wiki/G5NlwYGGAiJWGmkCc4NcQ3sAnms?from=from_copylink)
