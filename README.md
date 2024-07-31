@@ -22,6 +22,12 @@ b站up名称：
 ![alt text](./OCR_VG/out/1.jpg)
 ![alt text](./OCR_VG/out/4.jpg)
 
+### mbti角色扮演
+与北大Chatlaw团队每个人格训练一个模型不同，仅使用一个2b模型完成了16种人格的无缝切换（可玩人格分裂）
+![ESTP](./mbti_role_play/demo_img/ESTP.PNG)
+![INTJ](./mbti_role_play/demo_img/INTJ.PNG)
+![ESTP1](./mbti_role_play/demo_img/ESTP1.PNG)
+![INTJ1](./mbti_role_play/demo_img/INTJ1.PNG)
 ### 混合模态微调
 MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯文本和图文对的混合训练模式，放在了MIniCPM_Series_Tutorial/ft_language_replace_file文件夹下，可以自取[混合模态微调教程](https://modelbest.feishu.cn/wiki/Y1NbwYijHiuiqvkSf0jcUOvFnTe?from=from_copylink)
 对于对齐训练导致的语言模态能力下降是指的对齐后的多模态模型mllm，对于纯语言输入的回复能力有所下降，俗称对齐税（本质上也许是另外一种灾难性遗忘）。
