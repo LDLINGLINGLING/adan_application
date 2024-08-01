@@ -1,6 +1,7 @@
 # MIniCPM_Series_Tutorial
 
 本人是openbmb负责开源社区的同学，modelbest(面壁智能)一直致力降低大模型使用门槛，提高模型知识密度，让大模型飞入千家万户。
+
 为此我写了minicpm和MiniCPM-Llama3-V 2.5的教程，包括推理，量化，边端部署，微调，技术报告，应用六个主题，基于MiniCPM的应用我会上传到本仓库。
 地址如下：
 
@@ -23,7 +24,7 @@ b站up名称：
 ![alt text](./OCR_VG/out/4.jpg)
 
 ### mbti角色扮演
-与北大Chatlaw团队每个人格训练一个模型不同，仅使用一个2b模型完成了16种人格的无缝切换（可玩人格分裂）
+与北大Chatlaw团队每个人格训练一个模型不同，仅使用一个2b模型完成了16种人格的无缝切换（可玩人格分裂）,教程自取[角色扮演](https://modelbest.feishu.cn/docx/EcNjdGwvwoLkDrxpVrQcLwlknCg?from=from_copylink)
 ![ESTP](./mbti_role_play/demo_img/ESTP.PNG)
 ![INTJ](./mbti_role_play/demo_img/INTJ.PNG)
 ![ESTP1](./mbti_role_play/demo_img/ESTP1.PNG)
