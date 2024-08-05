@@ -1,4 +1,4 @@
-# MIniCPM_Series_Tutorial
+# MiniCPM_Series_Tutorial
 
 本人是openbmb负责开源社区的同学，modelbest(面壁智能)一直致力降低大模型使用门槛，提高模型知识密度，让大模型飞入千家万户。
 
