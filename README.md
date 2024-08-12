@@ -39,3 +39,20 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
 ![alt text](./4G_memory_rag/image.png)
 ![alt text](./4G_memory_rag/image1.png)
 这个没什么好解释的，可以在极低显存下运行rag，教程自取[RAG](https://modelbest.feishu.cn/wiki/G5NlwYGGAiJWGmkCc4NcQ3sAnms?from=from_copylink)
+
+### MiniCPMV2.6的awq量化
+由于bnb量化的minicpmv2.6无法用vllm加载，因此适配了autoawq，目前已经向autoawq提了pr，等合并后可以直接使用。
+使用方法如下：
+
+1. 获取个人autoawq分支
+```bash
+git clone https://github.com/LDLINGLINGLING/AutoAWQ
+cd AutoAWQ
+pip install e .
+```
+2. 将MiniCPM_Series_Tutorial/MiniCPMV2_6_awq/modeling_minicpmv.py文件替换掉minicpmv2.6模型保存路径下的同名文件
+3. 修改MiniCPM_Series_Tutorial/MiniCPMV2_6_awq/quantize.py中的model_path为你minicpmv2.6的保存路径。
+4. 运行quantize.py
+
+获得minicpmv2.6的awq模型后可以使用原来的vllm进行部署，部署方式完全相同,模型从16g显存将为7g显存
+![alt text](./MiniCPMV2_6_awq/image.png)
