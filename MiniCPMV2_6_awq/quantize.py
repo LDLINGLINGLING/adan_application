@@ -3,6 +3,9 @@
 from datasets import load_dataset
 from awq import AutoAWQForCausalLM
 from transformers import AutoTokenizer
+import os
+import shutil
+
 
 model_path = '/root/ld/ld_model_pretrain/MiniCPM-V-2_6'
 quant_path = '/root/ld/ld_model_pretrain/MiniCPM-V-2_6_awq'
@@ -11,7 +14,34 @@ quant_config = { "zero_point": True, "q_group_size": 128, "w_bit": 4, "version":
 # Load model
 model = AutoAWQForCausalLM.from_pretrained(model_path)
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True,device_map={"": "cuda:0"})
+# 保证原始模型的各个文件不遗漏保存到merge_path中
+def copy_files_not_in_B(A_path, B_path):
+    """
+    Copies files from directory A to directory B if they exist in A but not in B.
 
+    :param A_path: Path to the source directory (A).
+    :param B_path: Path to the destination directory (B).
+    """
+    # 保证路径存在
+    if not os.path.exists(A_path):
+        raise FileNotFoundError(f"The directory {A_path} does not exist.")
+    if not os.path.exists(B_path):
+        os.makedirs(B_path)
+
+    # 获取路径A中所有非权重文件
+    files_in_A = os.listdir(A_path)
+    files_in_A = set([file for file in files_in_A if not (".bin" in file or "safetensors" in file or 'merges.txt' in file)])
+    # List all files in directory B
+    files_in_B = set(os.listdir(B_path))
+
+    # 找到所有A中存在但B中不存在的文件
+    files_to_copy = files_in_A - files_in_B
+
+    # 将这些文件复制到B路径下
+    for file in files_to_copy:
+        src_file = os.path.join(A_path, file)
+        dst_file = os.path.join(B_path, file)
+        shutil.copy2(src_file, dst_file)
 # Define data loading methods
 def load_alpaca():
     data = load_dataset('/root/ld/pull_request/MiniCPM/quantize/quantize_data/alpaca', split="train")
@@ -37,3 +67,5 @@ model.save_quantized(quant_path)
 tokenizer.save_pretrained(quant_path)
 
 print(f'Model is quantized and saved at "{quant_path}"')
+
+copy_files_not_in_B(model_path,quant_path)
