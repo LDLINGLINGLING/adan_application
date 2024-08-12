@@ -30,7 +30,7 @@ def copy_files_not_in_B(A_path, B_path):
 
     # 获取路径A中所有非权重文件
     files_in_A = os.listdir(A_path)
-    files_in_A = set([file for file in files_in_A if not (".bin" in file or "safetensors" in file or 'merges.txt' in file)])
+    files_in_A = set([file for file in files_in_A if not (".bin" in file or "safetensors" in file )])
     # List all files in directory B
     files_in_B = set(os.listdir(B_path))
 
