@@ -12,7 +12,6 @@
 3. 保证encode_model_device设置为cpu
 """
 
-
 from langchain.document_loaders import PyPDFLoader, TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
