@@ -31,9 +31,9 @@ b站up名称：
 1. 输入20张待选图片：
 ![alt text](./OCR_Multimodal_Search/asset/image-2.png)
 2. 输入query
-![alt text](./OCR_Multimodal_Search/asset/image-1.png)
+![alt text](![alt text](./OCR_Multimodal_Search/asset/image-1.png))
 3. 得到与query最相近的图片。
-![alt text](./OCR_Multimodal_Search/asset/image-3.png)
+(![alt text](./OCR_Multimodal_Search/asset/image-3.png))
 
 #### 使用教程
 见[飞书文档](https://modelbest.feishu.cn/docx/CGEzdu25MoXkoVx3Qoac0e25nvg?from=from_copylink)
@@ -44,6 +44,7 @@ b站up名称：
 ![INTJ](./mbti_role_play/demo_img/INTJ.PNG)
 ![ESTP1](./mbti_role_play/demo_img/ESTP1.PNG)
 ![INTJ1](./mbti_role_play/demo_img/INTJ1.PNG)
+
 ### 混合模态微调
 MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯文本和图文对的混合训练模式，放在了MIniCPM_Series_Tutorial/ft_language_replace_file文件夹下，可以自取[混合模态微调教程](https://modelbest.feishu.cn/wiki/Y1NbwYijHiuiqvkSf0jcUOvFnTe?from=from_copylink)
 对于对齐训练导致的语言模态能力下降是指的对齐后的多模态模型mllm，对于纯语言输入的回复能力有所下降，俗称对齐税（本质上也许是另外一种灾难性遗忘）。
