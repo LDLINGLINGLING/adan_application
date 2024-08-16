@@ -3,7 +3,6 @@ from typing import List, Optional
 import json
 import torch
 import torchvision
-
 from threading import Thread
 from copy import deepcopy
 from PIL import Image
