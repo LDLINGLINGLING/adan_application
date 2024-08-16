@@ -13,6 +13,7 @@ import logging
 from .configuration_minicpm import MiniCPMVConfig
 from .resampler import Resampler
 
+
 IMAGENET_INCEPTION_MEAN = (0.5, 0.5, 0.5) # timm.data.IMAGENET_INCEPTION_MEAN
 IMAGENET_INCEPTION_STD = (0.5, 0.5, 0.5)  # timm.data.IMAGENET_INCEPTION_STD
 logger=logging.getLogger('my_logger')
