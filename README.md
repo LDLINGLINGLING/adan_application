@@ -19,9 +19,24 @@ b站up名称：
 以下项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
 ### OCR_VG
-同时将OCR和定位任务融合，考虑排版问题，该项目在OCR_VG的文件夹下，在可以自取[文字识别与定位教程](https://modelbest.feishu.cn/wiki/HLRiwNgKEic6cckGyGucFvxQnJw?from=from_copylink)。以下是项目效果
+同时将OCR和定位任务融合，考虑排版问题，该项目在OCR_VG的文件夹下，在可以自取[文字识别与定位教程](https://modelbest.feishu.cn/wiki/HLRiwNgKEic6cckGyGucFvxQnJw?from=from_copylink)。
+#### 项目效果
 ![alt text](./OCR_VG/out/1.jpg)
 ![alt text](./OCR_VG/out/4.jpg)
+
+### 基于MiniCPMV2.0的跨模态搜索
+使用多向量和对比学习的方法，目标是训练一个跨模态端到端搜索的模型，可以理解密集文字、复杂表格。[模型地址](https://www.modelscope.cn/models/linglingdan/Minicpmv_embeding_multi_vector)
+
+#### 效果展示：
+1. 输入20张待选图片：
+![alt text](./OCR_Multimodal_Search/asset/image-2.png)
+2. 输入query
+![alt text](./OCR_Multimodal_Search/asset/image-1.png)
+3. 得到与query最相近的图片。
+![alt text](./OCR_Multimodal_Search/asset/image-3.png)
+
+#### 使用教程
+见[飞书文档](https://modelbest.feishu.cn/docx/CGEzdu25MoXkoVx3Qoac0e25nvg?from=from_copylink)
 
 ### mbti角色扮演
 与北大Chatlaw团队每个人格训练一个模型不同，仅使用一个2b模型完成了16种人格的无缝切换（可玩人格分裂）,教程自取[角色扮演](https://modelbest.feishu.cn/docx/EcNjdGwvwoLkDrxpVrQcLwlknCg?from=from_copylink)
