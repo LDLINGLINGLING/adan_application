@@ -6,7 +6,6 @@ import base64
 import io
 from accelerate import load_checkpoint_and_dispatch, init_empty_weights
 from transformers import AutoTokenizer, AutoModel
-
 from omnilmm.utils import disable_torch_init
 from omnilmm.model.omnilmm import OmniLMMForCausalLM
 from omnilmm.model.utils import build_transform
