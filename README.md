@@ -30,8 +30,8 @@ b站up名称：
 #### 效果展示：
 1. 输入20张待选图片：
 ![alt text](./OCR_Multimodal_Search/asset/image-2.png)
-2. 输入query
-![alt text](![alt text](./OCR_Multimodal_Search/asset/image-1.png))
+2. 输入query文字进行搜索:
+(![alt text](./OCR_Multimodal_Search/asset/image-1.png))
 3. 得到与query最相近的图片。
 (![alt text](./OCR_Multimodal_Search/asset/image-3.png))
 
