@@ -4,7 +4,7 @@
 ```bash
 git clone https://github.com/LDLINGLINGLING/MiniCPM_Series_Tutorial
 ```
-2. repalce the modeling_minicpmv.py file in minicpmv2.6 MiniCPM_Series_Tutorial/auto_plan/finetune_language.py/replace_file/modeling_minicpmv.py
+2. repalce the modeling_minicpmv.py file in minicpmv2.6 with MiniCPM_Series_Tutorial/auto_plan/finetune_language.py/replace_file/modeling_minicpmv.py
 
 3. prepare the data with having image(only one) and some not
 
