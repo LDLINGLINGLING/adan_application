@@ -23,7 +23,8 @@ from io import BytesIO
 
 # 忽略所有警告
 warnings.filterwarnings("ignore")
-
+model_path='/root/ld/ld_model_pretrained/Minicpmv2_6'
+img_save_path ='/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/local_image.jpg'
 # 定义自定义的 StoppingCriteria 类
 class SequenceStoppingCriteria(StoppingCriteria):
     def __init__(self, sequence_ids):
@@ -57,7 +58,7 @@ class SequenceStoppingCriteria(StoppingCriteria):
 
 
 for _ in range(10):  # 网络不稳定，多试几次
-        name = '/root/ld/ld_model_pretrained/Minicpmv2_6'
+        name = model_path
         tokenizer = AutoTokenizer.from_pretrained(name, trust_remote_code=True)
         generation_config = GenerationConfig.from_pretrained(name, trust_remote_code=True)
         model = AutoModel.from_pretrained(name, trust_remote_code=True,
@@ -251,8 +252,8 @@ def call_plugin(plugin_name: str, plugin_args: str) -> str:
                 yzmdata = requests.get(image_path,headers=headers)
                 tempIm = BytesIO(yzmdata.content)
                 image1 = Image.open(tempIm).convert('RGB')
-                image1.save('/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/local_image.jpg')
-                image1 = Image.open('/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/local_image.jpg').convert('RGB')
+                image1.save(img_save_path)
+                image1 = Image.open(img_save_path).convert('RGB')
             else:
                 image1 = Image.open(image_path).convert('RGB')
         except:
@@ -269,8 +270,8 @@ def call_plugin(plugin_name: str, plugin_args: str) -> str:
                 yzmdata = requests.get(image_path,headers=headers)
                 tempIm = BytesIO(yzmdata.content)
                 image1 = Image.open(tempIm).convert('RGB')
-                image1.save('/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/local_image.jpg')
-                image1 = Image.open('/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/local_image.jpg').convert('RGB')
+                image1.save(img_save_path)
+                image1 = Image.open(img_save_path).convert('RGB')
             else:
                 image1 = Image.open(image_path).convert('RGB')
         question1 = 'Please describe all the details in this picture in detail?'
