@@ -58,7 +58,7 @@ def index(file, ds):
         images_dataset,
         batch_size=16,
         shuffle=False,
-        collate_fn=lambda x: data_collator(x),
+        collate_fn=lambda x: data_collator(x,padding_value=0, max_length=2048,device=device),
     )
     ds = []
     for batch_doc in tqdm(image_dataloader):
@@ -74,7 +74,7 @@ COLORS = ["#4285f4", "#db4437", "#f4b400", "#0f9d58", "#e48ef1"]
 # Load model
 # Load model and lora
 model_name = "/root/ld/ld_model_pretrained/minicpm-v"
-lora_path = "/root/ld/ld_project/pull_request/MiniCPM-V/finetune/output/output__lora/checkpoint-1000"
+lora_path = "/root/ld/ld_model_pretrained/adapter_minicpmv_search"
 model = AutoModel.from_pretrained(model_name, torch_dtype=torch.float16, device_map="cuda",trust_remote_code=True).eval()
 model = PeftModel.from_pretrained(model, lora_path)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code=True)
