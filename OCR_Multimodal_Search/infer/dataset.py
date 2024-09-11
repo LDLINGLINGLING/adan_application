@@ -110,29 +110,29 @@ def data_collator_query(examples, padding_value=0, max_length=2048):
     )
     return query_ids
 
-def data_collator(examples, padding_value=0, max_length=2048):
+def data_collator(examples, padding_value=0, max_length=2048,device='cpu'):
     def trim_and_pad(seq, batch_first, padding_value):
         return pad_sequence([s[:max_length] for s in seq], batch_first=True, padding_value=padding_value)
     input_ids = trim_and_pad(
         [example["input_ids"] for example in examples],
         batch_first=True,
         padding_value=padding_value,
-    )
+    ).to(device)
     position_ids = trim_and_pad(
         [example["position_ids"] for example in examples],
         batch_first=True,
         padding_value=padding_value,
-    )
+    ).to(device)
     targets = trim_and_pad(
         [example["labels"] for example in examples],
         batch_first=True,
         padding_value=-100,
-    )
+    ).to(device)
     attention_mask = trim_and_pad(
         [example["attention_mask"] for example in examples],
         batch_first=True,
         padding_value=padding_value,
-    )
+    ).to(device)
     pixel_values = [example["pixel_values"] for example in examples]
     image_bound = [example["image_bound"] for example in examples]
     tgt_sizes = [example["tgt_sizes"] for example in examples]
