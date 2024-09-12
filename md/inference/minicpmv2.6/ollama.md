@@ -1,13 +1,54 @@
 
 # Ollama 推理
-
 ## 设备要求
-
 - 运行非量化版本需要19GB以上内存
 - 运行量化版本需要8GB以上内存
+## ollama官方支持
+1. 官方已经合并我们的分支，可以直接用新版ollama
+```bash
+ollama run minicpm-v
+#以下是输出日志
+pulling manifest 
+pulling 262843d4806a... 100% ▕████████████████▏ 4.4 GB                         
+pulling f8a805e9e620... 100% ▕████████████████▏ 1.0 GB                         
+pulling 60ed67c565f8... 100% ▕████████████████▏  506 B                         
+pulling 43070e2d4e53... 100% ▕████████████████▏  11 KB                         
+pulling f02dd72bb242... 100% ▕████████████████▏   59 B                         
+pulling 175e3bb367ab... 100% ▕████████████████▏  566 B                         
+verifying sha256 digest 
+writing manifest
+```
+### 命令行方式
+用空格分割输入问题，图片路径
+```bash
+这张图片描述了什么？ /Users/liudan/Desktop/WechatIMG70.jpg
 
+#以下是输出
+这张图片展示了一个年轻成年男性站在白色背景前。他有着短发，戴着金属边眼镜，并
+穿着浅蓝色的衬衫。他的表情中立，嘴唇紧闭，目光直视镜头。照片中的光线明亮均匀
+，表明这是一张专业拍摄的照片。这个男人身上没有可见的纹身、珠宝或其他配饰，这
+些可能会影响他对职业或身份的感知
+```
+### 接口方式
+```python
+with open(image_path, 'rb') as image_file:
+        # 将图片文件转换为 base64 编码
+        encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+    data = {
+    "model": "minicpm-v",
+    "prompt": query,
+    "stream": False,
+    "images": [encoded_string]# 列表可以放多张图，每张图用上面的方式转化为base64的格式
+    }
+
+    # 设置请求 URL
+    url = "http://localhost:11434/api/generate"
+    response = requests.post(url, json=data)
+
+    return response
+```
 ## 步骤1：获取gguf模型
-
+上述官方教程跑通，则无需看以下教程
 按照上述Llama.cpp教程获取gguf模型。语言模型最好是量化模型。
 
 ## 步骤2：安装依赖包
