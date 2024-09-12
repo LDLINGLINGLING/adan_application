@@ -233,18 +233,19 @@ MiniCPM-V 2.6 是 MiniCPM-V 系列中最新、性能最佳的模型。该模型�
 - [MiniCPM-V 2.6](https://huggingface.co/openbmb/MiniCPM-V-2_6)
 ## 推理部署(✅)
 #### MiniCPM2.0
--  [MiniCPM_transformers_cuda](./md/inference/minicpm2.0/transformers.md)
--  [MiniCPM_vllm_cuda](./md/inference/minicpm2.0/vllm.md)
--  [MiniCPM__mlx_mac](./md/inference/minicpm2.0/mlx.md)
--  [MiniCPM_ollama_cuda_cpu_mac](./md/inference/minicpm2.0/ollama.md)
--  [MiniCPM_llamacpp_cuda_cpu](./md/inference/minicpm2.0/llama.cpp_pc.md)
--  [MiniCPM_llamacpp_android](./md/inference/minicpm2.0/llama.cpp_android.md)
+-  [MiniCPM2.0_transformers_cuda](./md/inference/minicpm2.0/transformers.md)
+-  [MiniCPM2.0_vllm_cuda](./md/inference/minicpm2.0/vllm.md)
+-  [MiniCPM2.0__mlx_mac](./md/inference/minicpm2.0/mlx.md)
+-  [MiniCPM2.0_ollama_cuda_cpu_mac](./md/inference/minicpm2.0/ollama.md)
+-  [MiniCPM2.0_llamacpp_cuda_cpu](./md/inference/minicpm2.0/llama.cpp_pc.md)
+-  [MiniCPM2.0_llamacpp_android](./md/inference/minicpm2.0/llama.cpp_android.md)
 -  [MiniCPM-S_powerinfer_cuda](./md/inference/minicpm2.0/powerinfer_pc.md)
 -  [MiniCPM-S_powerinfer_android](./md/inference/minicpm2.0/powerinfer_android.md)
 -  FAQ
 #### MiniCPM3.0
 -  [MiniCPM3.0_vllm_cuda](./md/inference/minicpm3.0/vllm.md)
 -  [MiniCPM3.0_transformers_cuda_cpu](./md/inference/minicpm3.0/transformers.md)
+-  [MiniCPM3.0_llamacpp_cuda_cpu](./md/inference/minicpm3.0/llamcpp.md)
 #### MiniCPMV2.5
 - [MiniCPM-Llama3-V 2.5_vllm_cuda](./md/inference/minicpmv2.5/vllm.md)
 - [MiniCPM-Llama3-V 2.5_LMdeploy_cuda](./md/inference/minicpmv2.5/LMdeploy.md)
@@ -261,11 +262,14 @@ MiniCPM-V 2.6 是 MiniCPM-V 系列中最新、性能最佳的模型。该模型�
 - [MiniCPM-V 2.6_swift_cuda](https://github.com/modelscope/ms-swift/issues/1613)
 - FAQ
 ## 微调(✅)
+#### MiniCPM3.0
+- [MiniCPM3_llamafactory_sft_RLHF_cuda](./md/finetune/minicpm3.0/llama_factory.md)
 #### MiniCPM2.0
-- [MiniCPM_官方代码_sft_cuda](./md/finetune/minicpm2.0/sft.md)
-- [MiniCPM_mlx_sft_lora_mac](./md/finetune/minicpm2.0/mlx_sft.md)
-- [MiniCPM_llamafactory_RLHF_cuda](./md/finetune/minicpm2.0/llama_factory.md)
+- [MiniCPM2.0_官方代码_sft_cuda](./md/finetune/minicpm2.0/sft.md)
+- [MiniCPM2.0_mlx_sft_lora_mac](./md/finetune/minicpm2.0/mlx_sft.md)
+- [MiniCPM2.0_llamafactory_RLHF_cuda](./md/finetune/minicpm2.0/llama_factory.md)
 - FAQ
+
 #### MiniCPMV2.5
 - [MiniCPM-Llama3-V 2.5_官方代码_cuda](./md/finetune/minicpmv2.5/sft.md)
 - [MiniCPM-Llama3-V-2_5_swift_cuda](./md/finetune/minicpmv2.5/swift.md)
@@ -277,10 +281,15 @@ MiniCPM-V 2.6 是 MiniCPM-V 系列中最新、性能最佳的模型。该模型�
 - FAQ
 ## 模型量化(✅)
 #### MiniCPM2.0
-- [MiniCPM_awq量化](./md/quantize/minicpm2.0/awq.md)
-- [MiniCPM_gguf量化](./md/inference/minicpm2.0/llama.cpp_pc.md)
-- [MiniCPM_gptq量化](./md/quantize/minicpm2.0/gptq.md)
-- [MiniCPM_bnb量化](./md/quantize/minicpm2.0/bnb.md)
+- [MiniCPM2.0_awq量化](./md/quantize/minicpm2.0/awq.md)
+- [MiniCPM2.0_gguf量化](./md/inference/minicpm2.0/llama.cpp_pc.md)
+- [MiniCPM2.0_gptq量化](./md/quantize/minicpm2.0/gptq.md)
+- [MiniCPM2.0_bnb量化](./md/quantize/minicpm2.0/bnb.md)
+#### MiniCPM3.0
+- [MiniCPM3_awq量化](./md/quantize/minicpm3.0/awq.md)
+- [MiniCPM3_gguf量化](./md/inference/minicpm3.0/llamcpp.md)
+- [MiniCPM3_gptq量化](./md/quantize/minicpm3.0/gptq.md)
+- [MiniCPM3_bnb量化](./md/quantize/minicpm3.0/bnb.md)
 #### MiniCPMV2.5
 - [MiniCPM-Llama3-V 2.5bnb量化](./md/quantize/minicpmv2.5/bnb.md)
 - [MiniCPM-Llama3-V 2.5gguf量化](./md/inference/minicpmv2.5/llamacpp_pc.md)
@@ -296,12 +305,14 @@ MiniCPM-V 2.6 是 MiniCPM-V 系列中最新、性能最佳的模型。该模型�
 ### 语言模型
 - [4G显存玩转rag_langchain](https://modelbest.feishu.cn/wiki/G5NlwYGGAiJWGmkCc4NcQ3sAnms?from=from_copylink) 
 - [RLHF可控文本生成](https://modelbest.feishu.cn/wiki/ZEzGwgDgSi2Nk1kjAfFcrZn4nKd?from=from_copylink)
+- [function_call](https://modelbest.feishu.cn/wiki/ARJtwko3gisbw5kdPiDcDIOvnGg?from=from_copylink)
 ### 多模态模型
 - [跨模态高清检索](https://modelbest.feishu.cn/wiki/NdEjwo0hxilCIikN6RycOKp0nYf?from=from_copylink)
 - [文字识别与定位](https://modelbest.feishu.cn/wiki/HLRiwNgKEic6cckGyGucFvxQnJw?from=from_copylink)
 - [Agent入门](https://modelbest.feishu.cn/wiki/HKQdwbUUgiL0HNkSetjctaMcnrw?from=from_copylink)
 - [长链条Agent如何构造](https://modelbest.feishu.cn/wiki/IgF0wRGJYizj4LkMyZvc7e2Inoe?from=from_copylink)
 - [多模态文档RAG](https://modelbest.feishu.cn/wiki/NwhIwkJZYiHOPSkzwPUcq6hanif?from=from_copylink)
+
 ## 开源社区合作(✅)
 - [xtuner](https://github.com/InternLM/xtuner): [MiniCPM高效率微调的不二选择](https://modelbest.feishu.cn/wiki/AIU3wbREcirOm9kkvd7cxujFnMb#AMdXdzz8qoadZhxU4EucELWznzd)
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory.git)：[MiniCPM微调一键式解决方案](https://modelbest.feishu.cn/wiki/AIU3wbREcirOm9kkvd7cxujFnMb#BAWrdSjXuoFvX4xuIuzc8Amln5E)
