@@ -218,11 +218,11 @@ MiniCPM 3.0 是一个 4B 参数量的语言模型，相比 MiniCPM1.0/2.0，功�
 MiniCPM-V 2.6 是 MiniCPM-V 系列中最新、性能最佳的模型。该模型基于 SigLip-400M 和 Qwen2-7B 构建，共 8B 参数。与 MiniCPM-Llama3-V 2.5 相比，MiniCPM-V 2.6 性能提升显著，并引入了多图和视频理解的新功能。
 
 ## 技术报告(✅)
-- [语言模型技术报告](https://openbmb.vercel.app/?category=Chinese+Blog)
-- [多模态模型技术报告](https://arxiv.org/abs/2408.01800)
-- [小钢炮注意力机制进化历程](https://modelbest.feishu.cn/docx/JwBMdtwQ2orB5KxxS94cdydenWf?from=from_copylink)
-- [多模态模型架构原理介绍](https://modelbest.feishu.cn/wiki/X15nwGzqpioxlikbi2RcXDpJnjd?from=from_copylink)
-- [多模态高清解码原理](https://modelbest.feishu.cn/wiki/L0ajwm8VAiiPY6kDZfJce3B7nRg?from=from_copylink)
+- [语言模型技术报告_正式](https://openbmb.vercel.app/?category=Chinese+Blog)
+- [多模态模型技术报告_正式](https://arxiv.org/abs/2408.01800)
+- [小钢炮注意力机制进化历程_解读](https://modelbest.feishu.cn/docx/JwBMdtwQ2orB5KxxS94cdydenWf?from=from_copylink)
+- [多模态模型架构原理介绍_解读](https://modelbest.feishu.cn/wiki/X15nwGzqpioxlikbi2RcXDpJnjd?from=from_copylink)
+- [多模态高清解码原理_解读](https://modelbest.feishu.cn/wiki/L0ajwm8VAiiPY6kDZfJce3B7nRg?from=from_copylink)
 ## 支持硬件（云端、边端）(✅)
 - Gpu
 - Cpu
