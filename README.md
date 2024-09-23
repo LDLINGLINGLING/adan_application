@@ -2,7 +2,7 @@
 <div align="center">
 <img src="./asset/logo_and_other.png" width="500em" ></img> 
 
-本仓库是MiniCPM系列的使用指南。 Minicpm是openbmb开源的最强大、最高效的gpt4级别端侧模型。
+本仓库是MiniCPM系列的使用指南。 MiniCPM是OpenBMB开源的最强大、最高效的gpt4级别端侧模型。
 </div>
 <p align="center">
 <a href="https://github.com/OpenBMB" target="_blank">MiniCPM 仓库</a> |
@@ -27,8 +27,8 @@ MiniCPM 是由面壁智能开发的一系列开放人工智能模型。MiniCPM �
 - Gpu
 - Cpu
 - Npu
-- android
-- mac
+- Android
+- Mac
 ## 模型地址与下载(✅)
 - [MiniCPM2.0](https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16)
 - [MiniCPM3.0](https://huggingface.co/openbmb/MiniCPM3-4B)
