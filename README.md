@@ -2,7 +2,7 @@
 <div align="center">
 <img src="./asset/logo_and_other.png" width="500em" ></img> 
 
-本仓库是MiniCPM系列的使用指南。 MiniCPM是OpenBMB开源的最强大、最高效的gpt4级别端侧模型。
+本仓库是MiniCPM系列的使用指南。 MiniCPM是OpenBMB开源的最强大、最高效端侧大模型。
 </div>
 <p align="center">
 <a href="https://github.com/OpenBMB" target="_blank">MiniCPM 仓库</a> |
