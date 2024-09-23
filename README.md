@@ -15,7 +15,7 @@
 
 # 目录和内容
 ## 关于MiniCPM(✅)
-MiniCPM 是由面壁智能开发的一系列开放人工智能模型。MiniCPM 模型是最强大且成本效益最高的小型语言模型（SLMs），在多种语言、推理、长文本、工具调用、多模态、OCR等基准测试中表现出色，超越了许多同尺寸和更大尺寸的模型。MiniCPM 主要包括 language 和 vision 版本，可在手机、PC、Mac、车机、机器人等多种端侧设备上部署，以适应各种云端模型难以部署的应用场景。更多关于面壁智能 MiniCPM 家族的详细信息，请访问 [OpenBMB](https://github.com/OpenBMB)页面。
+MiniCPM是由面壁智能（ModelBest）联合OpenBMB开源社区和清华NLP实验室开源的轻量高性能端侧大模型。包含基座模型MiniCPM和多模态模型MiniCPM-V双旗舰，凭借以小博大、高效低成本的特性享誉全球。目前已经在性能上开启「端侧ChatGPT时刻」；多模态方向达到全面对标GPT-4V级水平，并且实现实时视频、多图联合理解首次上端，让大模型第一次睁开端侧「眼睛」实时看世界。可在手机、PC、Mac、车机、机器人等多种端侧设备上部署，以适应各种云端模型难以部署的应用场景。更多关于面壁小钢炮MiniCPM系列的详细信息，请访[OpenBMB](https://github.com/OpenBMB)页面。
 
 ## 技术报告(✅)
 - [语言模型技术报告_正式](https://openbmb.vercel.app/?category=Chinese+Blog)
