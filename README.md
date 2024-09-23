@@ -9,7 +9,7 @@
 <a href="https://github.com/OpenBMB/MiniCPM-V/" target="_blank">MiniCPM-V 仓库</a> |
 <a href="https://modelbest.feishu.cn/wiki/D2tFw8Pcsi5CIzkaHNacLK64npg" target="_blank">MiniCPM系列 知识库</a> |
 <a href="https://github.com/LDLINGLINGLING/MiniCPM_Series_Tutorial/blob/main/README_application.md" target="_blank">MiniCPM 系列应用</a> |
-加入我们的 <a href="https://discord.gg/3cGQn9b3YM" target="_blank">discord</a> 和 <a href="https://github.com/OpenBMB/MiniCPM/blob/main/assets/wechat.jpg" target="_blank">微信群</a>
+加入我们的 <a href="https://discord.gg/3cGQn9b3YM" target="_blank">discord</a> 和 <a href="./asset/weixin.png" target="_blank">微信群</a>
  
 </p>
 
