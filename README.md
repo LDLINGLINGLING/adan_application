@@ -15,7 +15,7 @@
 
 # 目录和内容
 ## 关于MiniCPM系列(✅)
-MiniCPM系列 是由面壁智能开发的一系列开放人工智能模型。MiniCPM 模型是最强大且成本效益最高的小型语言模型（SLMs），在多种语言、推理、长文本、工具调用、多模态、OCR等基准测试中表现出色，超越了许多同尺寸和更大尺寸的模型。MiniCPM 主要包括 language 和 vision 版本，可在手机、PC、Mac、车机、机器人等多种端侧设备上部署，以适应各种云端模型难以部署的应用场景。更多关于面壁智能 MiniCPM 家族的详细信息，请访问欢迎来到 [openbmb github](https://github.com/OpenBMB)页面。
+MiniCPM系列 是由面壁智能开发的一系列开放人工智能模型。MiniCPM 模型是最强大且成本效益最高的小型语言模型（SLMs），在多种语言、推理、长文本、工具调用、多模态、OCR等基准测试中表现出色，超越了许多同尺寸和更大尺寸的模型。MiniCPM 主要包括 language 和 vision 版本，可在手机、PC、Mac、车机、机器人等多种端侧设备上部署，以适应各种云端模型难以部署的应用场景。更多关于面壁智能 MiniCPM 家族的详细信息，请访问 [OpenBMB](https://github.com/OpenBMB)页面。
 
 ## 技术报告(✅)
 - [语言模型技术报告_正式](https://openbmb.vercel.app/?category=Chinese+Blog)
