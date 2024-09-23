@@ -24,9 +24,9 @@ MiniCPM 是由面壁智能开发的一系列开放人工智能模型。MiniCPM �
 - [多模态模型架构原理介绍_解读](https://modelbest.feishu.cn/wiki/X15nwGzqpioxlikbi2RcXDpJnjd?from=from_copylink)
 - [多模态高清解码原理_解读](https://modelbest.feishu.cn/wiki/L0ajwm8VAiiPY6kDZfJce3B7nRg?from=from_copylink)
 ## 支持硬件（云端、边端）(✅)
-- Gpu
-- Cpu
-- Npu
+- GPU
+- CPU
+- NPU
 - Android
 - Mac
 ## 模型地址与下载(✅)
