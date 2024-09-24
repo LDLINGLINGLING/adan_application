@@ -126,4 +126,4 @@
 - [ChatLLM框架](https://github.com/foldl/chatllm.cpp)：[在CPU上跑MiniCPM](https://huggingface.co/openbmb/MiniCPM-2B-dpo-bf16/discussions/2#65c59c4f27b8c11e43fc8796)
 
 ## 社区共建
-OpenBMB社区非常欢迎大家共建本仓库，提出新的MiniCPM教程、生态适配、模型应用、issue的提出及其回复。
+秉承开源精神，我们鼓励大家共建本仓库，包括但不限于添加新的MiniCPM教程、分享使用体验、提供生态适配、模型应用等。我们期待开发者们为我们的开源仓库作出贡献。
