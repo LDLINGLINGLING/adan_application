@@ -29,6 +29,8 @@
 - NPU
 - Android
 - Mac
+- Windows
+- ios
 ## 模型地址与下载（部分）(✅)
 - [MiniCPM 2.4B](https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16)
 - [MiniCPM-V](https://huggingface.co/openbmb/MiniCPM-V)
@@ -39,15 +41,17 @@
 
 ## 推理部署(✅)
 #### MiniCPM 2.4B
--  [MiniCPM 2.4B_transformers_cuda](./md/inference/minicpm2.0/transformers.md)
--  [MiniCPM 2.4B_vllm_cuda](./md/inference/minicpm2.0/vllm.md)
--  [MiniCPM 2.4B__mlx_mac](./md/inference/minicpm2.0/mlx.md)
--  [MiniCPM 2.4B_ollama_cuda_cpu_mac](./md/inference/minicpm2.0/ollama.md)
--  [MiniCPM 2.4B_llamacpp_cuda_cpu](./md/inference/minicpm2.0/llama.cpp_pc.md)
--  [MiniCPM 2.4B_llamacpp_android](./md/inference/minicpm2.0/llama.cpp_android.md)
--  [MiniCPM-S 1.2B_powerinfer_cuda](./md/inference/minicpm2.0/powerinfer_pc.md)
--  [MiniCPM-S 1.2B_powerinfer_android](./md/inference/minicpm2.0/powerinfer_android.md)
--  FAQ
+- [MiniCPM 2.4B_transformers_cuda](./md/inference/minicpm2.0/transformers.md)
+- [MiniCPM 2.4B_vllm_cuda](./md/inference/minicpm2.0/vllm.md)
+- [MiniCPM 2.4B__mlx_mac](./md/inference/minicpm2.0/mlx.md)
+- [MiniCPM 2.4B_ollama_cuda_cpu_mac](./md/inference/minicpm2.0/ollama.md)
+- [MiniCPM 2.4B_llamacpp_cuda_cpu](./md/inference/minicpm2.0/llama.cpp_pc.md)
+- [MiniCPM 2.4B_llamacpp_android](./md/inference/minicpm2.0/llama.cpp_android.md)
+- FAQ
+#### MiniCPM-S 1.2B
+- [MiniCPM-S 1.2B_powerinfer_cuda](./md/inference/minicpm2.0/powerinfer_pc.md)
+- [MiniCPM-S 1.2B_powerinfer_android](./md/inference/minicpm2.0/powerinfer_android.md)
+- FAQ
 #### MiniCPM 3.0
 -  [MiniCPM 3.0_vllm_cuda](./md/inference/minicpm3.0/vllm.md)
 -  [MiniCPM 3.0_transformers_cuda_cpu](./md/inference/minicpm3.0/transformers.md)
