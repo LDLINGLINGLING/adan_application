@@ -1,6 +1,6 @@
 # MiniCPM_Series Cookbook
 <div align="center">
-<img src="./asset/logo_and_other.png" width="500em" ></img> 
+<img src="./asset/logo.png" width="500em" ></img> 
 
 本仓库是MiniCPM端侧系列模型的使用指南，包括推理、量化、边端部署、微调、应用、技术报告六个主题。
 </div>
@@ -125,3 +125,5 @@
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory.git)：[MiniCPM微调一键式解决方案](https://modelbest.feishu.cn/wiki/AIU3wbREcirOm9kkvd7cxujFnMb#BAWrdSjXuoFvX4xuIuzc8Amln5E)
 - [ChatLLM框架](https://github.com/foldl/chatllm.cpp)：[在CPU上跑MiniCPM](https://huggingface.co/openbmb/MiniCPM-2B-dpo-bf16/discussions/2#65c59c4f27b8c11e43fc8796)
 
+## 社区共建
+OpenBMB社区非常欢迎大家共建本仓库，提出新的MiniCPM教程、生态适配、模型应用、issue的提出及其回复。
