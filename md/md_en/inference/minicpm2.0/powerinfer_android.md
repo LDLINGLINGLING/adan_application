@@ -8,7 +8,6 @@
 
 Download and install the appropriate version of Termux on your phone; it is recommended to use [version v0.118.1](https://github.com/termux/termux-app/releases/tag/v0.118.1).
 
-![Termux Screenshot](../../../asset/termux.png)
 
 ### Step 2: Grant Storage Access Permissions to Termux
 
