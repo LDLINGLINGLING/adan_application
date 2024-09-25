@@ -14,7 +14,7 @@ autoawq_kernels 0.0.6
 
 ## Deploying Int4 Models with VLLM
 
-Refer to the [MiniCPM-V 2.6 Quantization Tutorial](#) for a speed improvement of up to twice and over 50% reduction in VRAM usage.
+Refer to the [MiniCPM-V 2.6 Quantization Tutorial](../../../md_en/quantize/minicpmv2.6/awq.md) for a speed improvement of up to twice and over 50% reduction in VRAM usage.
 
 ### Method 1: Using Python to Call VLLM for Inference
 
