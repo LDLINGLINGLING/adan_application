@@ -41,4 +41,3 @@
 6. Enter the provided address in your web browser, or click to open it.
 
 7. Enjoy using MiniCPM!
-```
