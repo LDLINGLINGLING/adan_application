@@ -15,7 +15,7 @@ Join our <a href="https://discord.gg/3cGQn9b3YM" target="_blank">Discord</a> and
 
 # Table of Contents
 ## About MiniCPM (✅)
-The "Little Cannon" MiniCPM series of edge-side large models is jointly open-sourced by ModelBest and the OpenBMB open-source community, in collaboration with the Tsinghua NLP Lab. It includes the base model MiniCPM and the multimodal model MiniCPM-V, both flagship models known for their high performance and efficiency at a low cost. Currently, it has initiated the "edge-side ChatGPT moment" in terms of performance; in the multimodal direction, it has achieved comprehensive benchmarking against GPT-4V-level standards, enabling real-time video and multi-image understanding on the edge for the first time. It is currently being deployed in smart terminal scenarios such as smartphones, computers, cars, wearable devices, VR, and more. For more detailed information about the MiniCPM series, please visit the [OpenBMB](https://github.com/OpenBMB) page.
+The MiniCPM edge-side series is jointly open-sourced by ModelBest and OpenBMB, in collaboration with the Tsinghua NLP Lab. It comprises globally lightweight high-performance AI models，including the MiniCPM foundation model and the MiniCPM-V multimodal model. We have now ushered in the "Edge-Side ChatGPT Era" in terms of performance; in the multimodal direction, we have made GPT-4V level MLLMsfor Single Image, Multi Image and Video on Your Phone. It is currently being deployed in end devices such as smartphones, computers, cars, wearable devices, VR, and more. For more detailed information about the MiniCPM series, please visit the [OpenBMB](https://github.com/OpenBMB) page.
 
 ## Technical Reports (✅)
 - [MiniCPM Language Model Technical Report](https://arxiv.org/abs/2404.06395)
