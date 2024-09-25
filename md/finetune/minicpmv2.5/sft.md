@@ -195,7 +195,8 @@ tokenizer.save_pretrained(merge_path)
 
 ### 方法二：自行量化模型
 
-## 4.1 修改 `MiniCPM-V/finetune/finetune_lora.sh`
+## 4.1 按照[bnb量化教程](../../quantize/minicpmv2.5/bnb.md)对模型进行量化。 
+## 4.2 修改 `MiniCPM-V/finetune/finetune_lora.sh`
 
 ```sh
 #!/bin/bash
