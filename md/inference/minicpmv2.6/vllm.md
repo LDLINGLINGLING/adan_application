@@ -38,6 +38,7 @@ git clone https://www.modelscope.cn/models/linglingdan/MiniCPM-V_2_6_awq_int4
 ```sh
 git clone https://github.com/LDLINGLINGLING/AutoAWQ.git
 cd AutoAWQ
+git checkout minicpmv2.6
 pip install e .
 ```
 
