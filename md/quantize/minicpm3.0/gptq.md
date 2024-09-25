@@ -1,28 +1,27 @@
-
 ## AutoGPTQ
 
-### 设备要求
-至少存在一张的NVIDIA 20系以上显卡，需要12GB以上显存。
+### Device Requirements
+At least one NVIDIA 20-series or higher GPU with more than 12GB of VRAM is required.
 
-### 方法1: 直接获取量化后的GPTQ权重（推荐）
+### Method 1: Directly Obtain Quantized GPTQ Weights (Recommended)
 ```bash
 git clone https://huggingface.co/openbmb/MiniCPM3-4B-GPTQ-Int4
 ```
 
-### 方法2: 自行量化（进行SFT后需要量化推荐）
+### Method 2: Quantize by Yourself (Recommended after SFT)
 
-1. **获取MiniCPM模型权重**
+1. **Acquire MiniCPM Model Weights**
    ```bash
    git clone https://huggingface.co/openbmb/MiniCPM3-4B
    ```
 
-2. **获取量化脚本**
+2. **Acquire Quantization Script**
    ```bash
    git clone https://github.com/OpenBMB/MiniCPM
    ```
 
-3. **安装AutoGPTQ分支**
-   这里获取我fork的分支代码。（已经提了PR）
+3. **Install the AutoGPTQ Branch**
+   Here, you will get the code from my forked branch. (A PR has been submitted)
    ```bash
    git clone https://github.com/LDLINGLINGLING/AutoGPTQ.git
    cd AutoGPTQ
@@ -30,9 +29,9 @@ git clone https://huggingface.co/openbmb/MiniCPM3-4B-GPTQ-Int4
    pip install -e .
    ```
 
-4. **开始量化**
+4. **Start Quantization**
    ```bash
    cd MiniCPM/quantize
-   # 以下代码中no_quantized_path修改为MiniCPM3权重保存的地址，save_path3为量化模型保存的地址
+   # In the following command, modify no_quantized_path to the location where the MiniCPM3 weights are saved, and save_path3 to the directory where the quantized model will be saved.
    python gptq_quantize.py --pretrained_model_dir no_quant_model_path --quantized_model_dir quant_save_path --bits 4
    ```

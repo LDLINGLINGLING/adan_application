@@ -168,10 +168,8 @@ torchrun $DISTRIBUTED_ARGS finetune.py  \
 cd MiniCPM-V/finetune
 bash finetune_lora.sh
 ```
-```
 以下是根据您提供的信息整理的Markdown文档：
 
-```markdown
 # MiniCPMV LoRA与模型合并保存及全量微调
 
 ## 5.4 LoRA与模型合并保存

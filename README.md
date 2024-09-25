@@ -1,4 +1,4 @@
-# MiniCPM_Series Cookbook
+# MiniCPM Cookbook
 <div align="center">
 <img src="./asset/logo.png" width="500em" ></img> 
 

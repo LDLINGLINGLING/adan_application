@@ -22,8 +22,8 @@ make
 ### 步骤3：获取MiniCPM的gguf模型
 
 #### 方法1：直接下载
-- [下载链接 - fp16格式](下载链接-fp16格式)
-- [下载链接 - q4km格式](下载链接-q4km格式)
+- [下载链接 - fp16格式](https://huggingface.co/runfuture/MiniCPM-2B-dpo-fp16-gguf)
+- [下载链接 - q4km格式](https://huggingface.co/runfuture/MiniCPM-2B-dpo-q4km-gguf)
 
 #### 方法2：自行转换MiniCPM模型为gguf格式
 
