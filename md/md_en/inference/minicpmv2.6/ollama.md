@@ -60,7 +60,9 @@ return response
 
 ## Step 1: Obtain the gguf Model
 
-If the official tutorial works, you can skip this section. Otherwise, follow the Llama.cpp tutorial to obtain the gguf model. It is recommended to use a quantized language model.
+Note:If the official tutorial works, you can skip this section. 
+
+Otherwise, follow the Llama.cpp tutorial to obtain the gguf model. It is recommended to use a quantized language model.
 
 ## Step 2: Install Dependencies
 
