@@ -108,6 +108,6 @@ cd PowerInfer
 - **Decode阶段**：45 token/s
 
 ![alt text](../../../asset/powerinfer.png)
-```
+
 
 这样，您就可以开始使用PowerInfer进行高效推理了！
