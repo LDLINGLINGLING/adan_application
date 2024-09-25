@@ -18,7 +18,7 @@ When starting the VLLM service, you can specify parameters such as computation p
 vllm serve /root/ld/ld_model_pretrained/Minicpmv2_6 --dtype auto --max-model-len 2048 --api-key token-abc123 --gpu_memory_utilization 1 --trust-remote-code
 ```
 
-For more parameters, refer to [vllm_argument](#).
+For more parameters, refer to [vllm_argument](https://docs.vllm.ai/en/latest/models/engine_args.html).
 
 ## Step 3: Call the VLLM HTTP Service Using Python Code
 
