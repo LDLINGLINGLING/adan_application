@@ -37,6 +37,7 @@ Install the AutoAWQ branch:
 ```sh
 git clone https://github.com/LDLINGLINGLING/AutoAWQ.git
 cd AutoAWQ
+git checkout minicpmv2.6
 pip install -e .
 ```
 
