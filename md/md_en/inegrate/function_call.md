@@ -1,6 +1,6 @@
 Below is a simple Python script translated into English and formatted as Markdown. This script demonstrates how to call a specific function to retrieve an order's delivery date. It includes a function `get_delivery_date`, a processing function `get_response_call`, and a defined list `tools` containing a description of the `get_delivery_date` function and its parameters.
 
-```markdown
+
 # Simple Function Call Implementation (Minicpm3.0)
 
 The following is a simple Python script to demonstrate how to call a specific function to get an order's delivery date. This script contains a function `get_delivery_date` and a function `get_response_call` that processes the function calls. Additionally, it defines a `tools` list that includes a description of the `get_delivery_date` function and its parameters.
@@ -103,4 +103,3 @@ print(eval(call_str))
 ```
 
 This script is designed to simulate a customer service scenario where a user inquires about the delivery status of their order. By utilizing the `get_delivery_date` function and processing the response through `get_response_call`, the script demonstrates how to integrate function calls within a conversational AI application.
-```
