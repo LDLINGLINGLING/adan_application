@@ -41,4 +41,3 @@ print([i.text for i in response])
 ```
 
 现在您可以开始使用并发推理代码进行高效推理了！
-```
