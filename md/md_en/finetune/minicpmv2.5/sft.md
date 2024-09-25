@@ -192,7 +192,8 @@ tokenizer.save_pretrained(merge_path)
 
 ### Method Two: Quantize the Model Yourself
 
-## 4.1 Modify `MiniCPM-V/finetune/finetune_lora.sh`
+## 4.1 Quantize the Model According to the [bnb Quantization Tutorial](../../quantize/minicpmv2.5/bnb.md)
+## 4.2 Modify `MiniCPM-V/finetune/finetune_lora.sh`
 
 ```sh
 #!/bin/bash
