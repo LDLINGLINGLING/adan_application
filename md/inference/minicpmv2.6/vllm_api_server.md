@@ -18,7 +18,7 @@ pip install e .
 vllm serve /root/ld/ld_model_pretrained/Minicpmv2_6 --dtype auto --max-model-len 2048 --api-key token-abc123 --gpu_memory_utilization 1 --trust-remote-code
 ```
 
-更多参数请访问[vllm_argument](#)。
+更多参数请访问[vllm_argument](https://docs.vllm.ai/en/latest/models/engine_args.html)。
 
 ## 步骤3：使用Python代码调用VLLM的HTTP服务
 
