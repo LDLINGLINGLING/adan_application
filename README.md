@@ -8,7 +8,7 @@
 <a href="https://github.com/OpenBMB" target="_blank">MiniCPM 仓库</a> |
 <a href="https://github.com/OpenBMB/MiniCPM-V/" target="_blank">MiniCPM-V 仓库</a> |
 <a href="https://modelbest.feishu.cn/wiki/D2tFw8Pcsi5CIzkaHNacLK64npg" target="_blank">MiniCPM系列 知识库</a> |
-<a href="https://github.com/LDLINGLINGLING/MiniCPM_Series_Tutorial/blob/main/README_application.md" target="_blank">MiniCPM 系列应用</a> |
+<a href="./README_en.md" target="_blank">English Readme</a> |
 加入我们的 <a href="https://discord.gg/3cGQn9b3YM" target="_blank">discord</a> 和 <a href="./asset/weixin.png" target="_blank">微信群</a>
  
 </p>
@@ -53,9 +53,10 @@
 - [MiniCPM-S 1.2B_powerinfer_android](./md/inference/minicpm2.0/powerinfer_android.md)
 - FAQ
 #### MiniCPM 3.0
--  [MiniCPM 3.0_vllm_cuda](./md/inference/minicpm3.0/vllm.md)
--  [MiniCPM 3.0_transformers_cuda_cpu](./md/inference/minicpm3.0/transformers.md)
--  [MiniCPM 3.0_llamacpp_cuda_cpu](./md/inference/minicpm3.0/llamcpp.md)
+- [MiniCPM 3.0_vllm_cuda](./md/inference/minicpm3.0/vllm.md)
+- [MiniCPM 3.0_transformers_cuda_cpu](./md/inference/minicpm3.0/transformers.md)
+- [MiniCPM 3.0_llamacpp_cuda_cpu](./md/inference/minicpm3.0/llamcpp.md)
+- [MiniCPM 3.0_sglang_cuda](./md/inference/minicpm3.0/sglang.md)
 #### MiniCPM-Llama3-V 2.5
 - [MiniCPM-Llama3-V 2.5_vllm_cuda](./md/inference/minicpmv2.5/vllm.md)
 - [MiniCPM-Llama3-V 2.5_LMdeploy_cuda](./md/inference/minicpmv2.5/LMdeploy.md)
@@ -109,8 +110,7 @@
 - [MiniCPM-V 2.6_gguf量化](./md/inference/minicpmv2.6/llamacpp.md)
 ## 集成(✅)
 - [langchain](./md/integrate/langchain.md)
-- [openai_api](./md/integrate/opeai_api.md)
-- chat_bot gradio
+- [openai_api](./md/integrate/openai_api.md)
 ## 应用(✅)
 ### 语言模型
 - [4G显存玩转rag_langchain](https://modelbest.feishu.cn/wiki/G5NlwYGGAiJWGmkCc4NcQ3sAnms?from=from_copylink) 
