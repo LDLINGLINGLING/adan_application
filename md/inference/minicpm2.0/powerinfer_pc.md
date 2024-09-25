@@ -1,6 +1,4 @@
-以下是将您提供的内容整理为Markdown格式的结果：
 
-```markdown
 # PowerInfer 简介
 
 PowerInfer是由上海交通大学开发的一个推理引擎，它可以在CPU/GPU上基于稀疏模型进行加速，据称能够获得最高达llama.cpp 11倍的推理性能。然而，PowerInfer目前仅适配了包括MiniCPM-S-2B-SFT在内的少数模型，并非适配所有模型。
