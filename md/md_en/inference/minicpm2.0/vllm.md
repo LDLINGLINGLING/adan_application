@@ -76,4 +76,3 @@ for prompt in prompts:
 ```
 
 Make sure to set the `--model_path` parameter correctly before running this script.
-```
