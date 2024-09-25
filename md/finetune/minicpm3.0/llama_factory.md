@@ -15,7 +15,7 @@
    将数据集处理成`Minicpm/finetune/llama_factory_example/llama_factory_data`文件夹中的格式, 示例包括DPO,KTO,SFT三种微调方式并放置到`llama_factory/data`目录下.
 
    #### 2.1 DPO数据格式
-     对于一个"human"的answer，需要给一个chosen（好的答案），一个rejected（坏的答案），需要修改的地方已经标红
+     对于一个"human"的answer，需要给一个chosen（好的答案），一个rejected（坏的答案）
      ```json
      [
        {
