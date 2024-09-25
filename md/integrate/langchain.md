@@ -1,7 +1,7 @@
 
 # RAG (Retrieval-Augmented Generation)简介
 ## 代码地址与使用
-按照项目[4g显存玩转rag](https://github.com/OpenBMB/MiniCPM/blob/main/demo/langchain_demo.py)开头注释简单修改参数，即可运行。
+按照项目[4g显存玩转rag](https://github.com/OpenBMB/MiniCPM/blob/main/demo/minicpm/langchain_demo.py)开头注释简单修改参数，即可运行。
 
 ## 什么是RAG？
 
