@@ -20,8 +20,6 @@ adb push ggml-model-Q4_K_M.gguf /sdcard/Download
 
 在手机上下载并安装合适的Termux版本，推荐使用[v0.118.1版本](https://github.com/termux/termux-app/releases/tag/v0.118.1)。
 
-![在这里插入相关截图]
-
 ### 步骤4：授权Termux访问存储权限
 
 打开Termux应用，并运行以下命令以授予Termux存储权限：
