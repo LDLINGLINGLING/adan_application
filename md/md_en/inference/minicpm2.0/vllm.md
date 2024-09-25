@@ -24,7 +24,7 @@ parser.add_argument("--model_path", type=str, default="")
 # Parse command-line arguments
 args = parser.parse_args()
 
-prompts = ["你吃饭了没？", "世界上最高的山是什么山"]  # prompts is a list where each element is a prompt text to input
+prompts = ["What's your name.", "Which is the highest mountain in the world?"]  # prompts is a list where each element is a prompt text to input
 
 # Format the prompt template
 prompt_template = "<User>{}<AI>"
