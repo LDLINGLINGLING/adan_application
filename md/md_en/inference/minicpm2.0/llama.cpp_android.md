@@ -20,7 +20,6 @@ adb push ggml-model-Q4_K_M.gguf /sdcard/Download
 
 Download and install an appropriate version of Termux on your phone; it is recommended to use [version v0.118.1](https://github.com/termux/termux-app/releases/tag/v0.118.1).
 
-![Insert relevant screenshot here]
 
 ### Step 4: Grant Storage Access Permissions to Termux
 
