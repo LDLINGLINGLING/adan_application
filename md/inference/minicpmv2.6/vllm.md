@@ -15,7 +15,7 @@ autoawq_kernels 0.0.6
 
 ## VLLM部署int4模型
 
-请参考[MiniCPM-V 2.6量化教程](../../../quantize/minicpmv2.6/awq.md)，速度提升一倍、显存减少一半以上。
+请参考[MiniCPM-V 2.6量化教程](../../../md/quantize/minicpmv2.6/awq.md)，速度提升一倍、显存减少一半以上。
 
 ### 方法1: 使用Python调用VLLM推理
 
