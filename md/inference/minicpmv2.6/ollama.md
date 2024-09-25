@@ -48,7 +48,7 @@ with open(image_path, 'rb') as image_file:
     return response
 ```
 ## 步骤1：获取gguf模型
-上述官方教程跑通，则无需看以下教程
+Note:上述官方教程跑通，则无需看以下教程
 
 按照上述Llama.cpp教程获取gguf模型。语言模型最好是量化模型。
 
