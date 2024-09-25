@@ -59,7 +59,7 @@ tokenizer.save_pretrained(save_path)
 
 ## Simple Comparison Before and After Quantization
 Below is a Markdown-formatted table showing the comparison of model performance before and after quantization:
-![Input Image](../../../asset/airplane.jpeg)
+![Input Image](../../../../asset/airplane.jpeg)
 | Item | Before Quantization | After Quantization |
 | --- | --- | --- |
 | Prompt | What's in this picture? | What's in this picture? |
