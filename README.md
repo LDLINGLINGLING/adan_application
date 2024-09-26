@@ -1,133 +1,87 @@
-# MiniCPM Cookbook
-<div align="center">
-<img src="./asset/logo.png" width="500em" ></img> 
+# 有趣的项目
+以下项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
-本仓库是MiniCPM端侧系列模型的使用指南，包括推理、量化、边端部署、微调、应用、技术报告六个主题。
-</div>
-<p align="center">
-<a href="https://github.com/OpenBMB" target="_blank">MiniCPM 仓库</a> |
-<a href="https://github.com/OpenBMB/MiniCPM-V/" target="_blank">MiniCPM-V 仓库</a> |
-<a href="https://modelbest.feishu.cn/wiki/D2tFw8Pcsi5CIzkaHNacLK64npg" target="_blank">MiniCPM系列 知识库</a> |
-<a href="./README_en.md" target="_blank">English Readme</a> |
-加入我们的 <a href="https://discord.gg/3cGQn9b3YM" target="_blank">discord</a> 和 <a href="./asset/weixin.png" target="_blank">微信群</a>
- 
-</p>
+## OCR_VG
+同时将OCR和定位任务融合，考虑排版问题，该项目在OCR_VG的文件夹下，在可以自取[文字识别与定位教程](https://modelbest.feishu.cn/wiki/HLRiwNgKEic6cckGyGucFvxQnJw?from=from_copylink)。
+### 项目效果
+![alt text](./OCR_VG/out/1.jpg)
+![alt text](./OCR_VG/out/4.jpg)
 
-# 目录和内容
-## 关于MiniCPM(✅)
-面壁「小钢炮」MiniCPM 端侧大模型系列，是由面壁智能（ModelBest）联合OpenBMB开源社区和清华NLP实验室开源的轻量高性能端侧大模型。包含基座模型MiniCPM和多模态模型MiniCPM-V双旗舰，凭借以小博大、高效低成本的特性享誉全球。目前已经在性能上开启「端侧ChatGPT时刻」；多模态方向达到全面对标GPT-4V级水平，实现实时视频、多图联合理解首次上端。目前，正在落地于手机、电脑、汽车、可穿戴设备、VR等智能终端场景中。更多关于面壁小钢炮MiniCPM系列的详细信息，请访[OpenBMB](https://github.com/OpenBMB)页面。
+## 基于MiniCPMV2.0的跨模态搜索
+使用多向量和对比学习的方法，目标是训练一个跨模态端到端搜索的模型，可以理解密集文字、复杂表格。[模型地址](https://www.modelscope.cn/models/linglingdan/Minicpmv_embeding_multi_vector)
 
-## 技术报告(✅)
-- [MiniCPM 语言模型技术报告_正式](https://arxiv.org/abs/2404.06395)
-- [MiniCPM-V 多模态模型技术报告_正式](https://arxiv.org/abs/2408.01800)
-- [MiniCPM 注意力机制进化历程_解读](https://modelbest.feishu.cn/docx/JwBMdtwQ2orB5KxxS94cdydenWf?from=from_copylink)
-- [MiniCPM-V 多模态模型架构原理介绍_解读](https://modelbest.feishu.cn/wiki/X15nwGzqpioxlikbi2RcXDpJnjd?from=from_copylink)
-- [MiniCPM-V 多模态高清解码原理_解读](https://modelbest.feishu.cn/wiki/L0ajwm8VAiiPY6kDZfJce3B7nRg?from=from_copylink)
-## 支持硬件（云端、边端）(✅)
-- GPU
-- CPU
-- NPU
-- Android
-- Mac
-- Windows
-- ios
-## 模型地址与下载（部分）(✅)
-- [MiniCPM 2.4B](https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16)
-- [MiniCPM-V](https://huggingface.co/openbmb/MiniCPM-V)
-- [MiniCPM-V 2.0](https://huggingface.co/openbmb/MiniCPM-V-2)
-- [MiniCPM-Llama3-V 2.5](https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5)
-- [MiniCPM-V 2.6](https://huggingface.co/openbmb/MiniCPM-V-2_6)
-- [MiniCPM 3.0 4B](https://huggingface.co/openbmb/MiniCPM3-4B)
+### 效果展示：
+1. 输入20张待选图片：
+![alt text](./OCR_Multimodal_Search/asset/image-2.png)
+2. 输入query文字进行搜索:
+(![alt text](./OCR_Multimodal_Search/asset/image-1.png))
+3. 得到与query最相近的图片。
+(![alt text](./OCR_Multimodal_Search/asset/image-3.png))
 
-## 推理部署(✅)
-#### MiniCPM 2.4B
-- [MiniCPM 2.4B_transformers_cuda](./md/inference/minicpm2.0/transformers.md)
-- [MiniCPM 2.4B_vllm_cuda](./md/inference/minicpm2.0/vllm.md)
-- [MiniCPM 2.4B__mlx_mac](./md/inference/minicpm2.0/mlx.md)
-- [MiniCPM 2.4B_ollama_cuda_cpu_mac](./md/inference/minicpm2.0/ollama.md)
-- [MiniCPM 2.4B_llamacpp_cuda_cpu](./md/inference/minicpm2.0/llama.cpp_pc.md)
-- [MiniCPM 2.4B_llamacpp_android](./md/inference/minicpm2.0/llama.cpp_android.md)
-- FAQ
-#### MiniCPM-S 1.2B
-- [MiniCPM-S 1.2B_powerinfer_cuda](./md/inference/minicpm2.0/powerinfer_pc.md)
-- [MiniCPM-S 1.2B_powerinfer_android](./md/inference/minicpm2.0/powerinfer_android.md)
-- FAQ
-#### MiniCPM 3.0
-- [MiniCPM 3.0_vllm_cuda](./md/inference/minicpm3.0/vllm.md)
-- [MiniCPM 3.0_transformers_cuda_cpu](./md/inference/minicpm3.0/transformers.md)
-- [MiniCPM 3.0_llamacpp_cuda_cpu](./md/inference/minicpm3.0/llamcpp.md)
-- [MiniCPM 3.0_sglang_cuda](./md/inference/minicpm3.0/sglang.md)
-#### MiniCPM-Llama3-V 2.5
-- [MiniCPM-Llama3-V 2.5_vllm_cuda](./md/inference/minicpmv2.5/vllm.md)
-- [MiniCPM-Llama3-V 2.5_LMdeploy_cuda](./md/inference/minicpmv2.5/LMdeploy.md)
-- [MiniCPM-Llama3-V 2.5_llamacpp_cuda_cpu](./md/inference/minicpmv2.5/llamacpp_pc.md)
-- [MiniCPM-Llama3-V 2.5_ollama_cuda_cpu](./md/inference/minicpmv2.5/ollama.md)
-- [MiniCPM-Llama3-V 2.5_transformers_cuda](./md/inference/minicpmv2.5/transformers_multi_gpu.md)
-- [MiniCPM-Llama3-V 2.5_xinference_cuda](./md/inference/minicpmv2.5/xinference.md)
-- [MiniCPM-Llama3-V 2.5_swift_cuda](./md/inference/minicpmv2.5/swift_python.md)
-#### MiniCPM-V 2.6
-- [MiniCPM-V 2.6_vllm_cuda](./md/inference/minicpmv2.6/vllm.md)
-- [MiniCPM-V 2.6_vllm_api_server_cuda](./md/inference/minicpmv2.6/vllm_api_server.md)
-- [MiniCPM-V 2.6_llamacpp_cuda_cpu](./md/inference/minicpmv2.6/llamacpp.md)
-- [MiniCPM-V 2.6_transformers_cuda](./md/inference/minicpmv2.6/transformers_mult_gpu.md)
-- [MiniCPM-V 2.6_swift_cuda](https://github.com/modelscope/ms-swift/issues/1613)
-- FAQ
-## 微调(✅)
-#### MiniCPM 3.0
-- [MiniCPM3_llamafactory_sft_RLHF_cuda](./md/finetune/minicpm3.0/llama_factory.md)
-#### MiniCPM 2.4B
-- [MiniCPM2.0_官方代码_sft_cuda](./md/finetune/minicpm2.0/sft.md)
-- [MiniCPM2.0_mlx_sft_lora_mac](./md/finetune/minicpm2.0/mlx_sft.md)
-- [MiniCPM2.0_llamafactory_RLHF_cuda](./md/finetune/minicpm2.0/llama_factory.md)
-- FAQ
+### 使用教程
+见[飞书文档](https://modelbest.feishu.cn/docx/CGEzdu25MoXkoVx3Qoac0e25nvg?from=from_copylink)
 
-#### MiniCPM-Llama3-V 2.5
-- [MiniCPM-Llama3-V 2.5_官方代码_cuda](./md/finetune/minicpmv2.5/sft.md)
-- [MiniCPM-Llama3-V-2_5_swift_cuda](./md/finetune/minicpmv2.5/swift.md)
-- [混合模态训练](https://modelbest.feishu.cn/wiki/Y1NbwYijHiuiqvkSf0jcUOvFnTe?from=from_copylink)
-#### MiniCPM-V 2.6
-- [MiniCPM-V 2.6_官方代码_sft_cuda](./md/finetune/minicpmv2.6/sft.md)
-- [MiniCPM-V 2.6_swift_sft_cuda](https://github.com/modelscope/ms-swift/issues/1613)
-- [混合模态训练](https://modelbest.feishu.cn/wiki/As5Ow99z3i4hrCkooRIcz79Zn2f?from=from_copylink) 
-- FAQ
-## 模型量化(✅)
-#### MiniCPM 2.4B
-- [MiniCPM 2.4B_awq量化](./md/quantize/minicpm2.0/awq.md)
-- [MiniCPM 2.4B_gguf量化](./md/inference/minicpm2.0/llama.cpp_pc.md)
-- [MiniCPM 2.4B_gptq量化](./md/quantize/minicpm2.0/gptq.md)
-- [MiniCPM 2.4B bnb量化](./md/quantize/minicpm2.0/bnb.md)
-#### MiniCPM3.0
-- [MiniCPM 3.0_awq量化](./md/quantize/minicpm3.0/awq.md)
-- [MiniCPM 3.0_gguf量化](./md/inference/minicpm3.0/llamcpp.md)
-- [MiniCPM 3.0_gptq量化](./md/quantize/minicpm3.0/gptq.md)
-- [MiniCPM 3.0_bnb量化](./md/quantize/minicpm3.0/bnb.md)
-#### MiniCPM-Llama3-V 2.5
-- [MiniCPM-Llama3-V 2.5 bnb量化](./md/quantize/minicpmv2.5/bnb.md)
-- [MiniCPM-Llama3-V 2.5 gguf量化](./md/inference/minicpmv2.5/llamacpp_pc.md)
-#### MiniCPM-V 2.6
-- [MiniCPM-V 2.6_bnb量化](./md/quantize/minicpmv2.6/bnb.md)
-- [MiniCPM-V 2.6_awq量化](./md/quantize/minicpmv2.6/awq.md)
-- [MiniCPM-V 2.6_gguf量化](./md/inference/minicpmv2.6/llamacpp.md)
-## 集成(✅)
-- [langchain](./md/integrate/langchain.md)
-- [openai_api](./md/integrate/openai_api.md)
-## 应用(✅)
-### 语言模型
-- [4G显存玩转rag_langchain](https://modelbest.feishu.cn/wiki/G5NlwYGGAiJWGmkCc4NcQ3sAnms?from=from_copylink) 
-- [RLHF可控文本生成](https://modelbest.feishu.cn/wiki/ZEzGwgDgSi2Nk1kjAfFcrZn4nKd?from=from_copylink)
-- [function_call](https://modelbest.feishu.cn/wiki/ARJtwko3gisbw5kdPiDcDIOvnGg?from=from_copylink)
-- [AIPC-windows搭建Agent](https://modelbest.feishu.cn/wiki/N0tswVXEqipuSUkWc96comFXnnd?from=from_copylink)
-### 多模态模型
-- [跨模态高清检索](https://modelbest.feishu.cn/wiki/NdEjwo0hxilCIikN6RycOKp0nYf?from=from_copylink)
-- [文字识别与定位](https://modelbest.feishu.cn/wiki/HLRiwNgKEic6cckGyGucFvxQnJw?from=from_copylink)
-- [Agent入门](https://modelbest.feishu.cn/wiki/HKQdwbUUgiL0HNkSetjctaMcnrw?from=from_copylink)
-- [长链条Agent如何构造](https://modelbest.feishu.cn/wiki/IgF0wRGJYizj4LkMyZvc7e2Inoe?from=from_copylink)
-- [多模态文档RAG](https://modelbest.feishu.cn/wiki/NwhIwkJZYiHOPSkzwPUcq6hanif?from=from_copylink)
+## 复杂agent项目
+使用minicpmv2.6完成了论文[AutoPlan](https://github.com/LDLINGLINGLING/AutoPlan)的项目，能够对复杂任务进行规划和执行。
 
-## 开源社区合作(✅)
-- [xtuner](https://github.com/InternLM/xtuner): [MiniCPM高效率微调的不二选择](https://modelbest.feishu.cn/wiki/AIU3wbREcirOm9kkvd7cxujFnMb#AMdXdzz8qoadZhxU4EucELWznzd)
-- [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory.git)：[MiniCPM微调一键式解决方案](https://modelbest.feishu.cn/wiki/AIU3wbREcirOm9kkvd7cxujFnMb#BAWrdSjXuoFvX4xuIuzc8Amln5E)
-- [ChatLLM框架](https://github.com/foldl/chatllm.cpp)：[在CPU上跑MiniCPM](https://huggingface.co/openbmb/MiniCPM-2B-dpo-bf16/discussions/2#65c59c4f27b8c11e43fc8796)
+### 效果展示：
+1. 输入query:
+![alt text](./agent_auto_plan/asset/image.png)
+2. 获得任务分解
+![alt text](./agent_auto_plan/asset/image-1.png)
+3. 获得任务执行
+![alt text](./agent_auto_plan/asset/image-2.png)
+![alt text](./agent_auto_plan/asset/image-3.png)
+4. 获得最终答案
 
-## 社区共建
-秉承开源精神，我们鼓励大家共建本仓库，包括但不限于添加新的MiniCPM教程、分享使用体验、提供生态适配、模型应用等。我们期待开发者们为我们的开源仓库作出贡献。
+![final_anser](./agent_auto_plan/asset/image-4.png)
+
+### 使用教程：
+见[飞书文档](https://modelbest.feishu.cn/wiki/IgF0wRGJYizj4LkMyZvc7e2Inoe?from=from_copylink)
+
+## mbti角色扮演
+与北大Chatlaw团队每个人格训练一个模型不同，仅使用一个2b模型完成了16种人格的无缝切换（可玩人格分裂）
+
+### 使用教程：
+[角色扮演](https://modelbest.feishu.cn/docx/EcNjdGwvwoLkDrxpVrQcLwlknCg?from=from_copylink)
+
+### 效果展示：
+![ESTP](./mbti_role_play/demo_img/ESTP.PNG)
+![INTJ](./mbti_role_play/demo_img/INTJ.PNG)
+![ESTP1](./mbti_role_play/demo_img/ESTP1.PNG)
+![INTJ1](./mbti_role_play/demo_img/INTJ1.PNG)
+
+## 混合模态微调
+MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯文本和图文对的混合训练模式，放在了MIniCPM_Series_Tutorial/ft_language_replace_file文件夹下，
+
+### 使用教程：
+可以自取[混合模态微调教程](https://modelbest.feishu.cn/wiki/Y1NbwYijHiuiqvkSf0jcUOvFnTe?from=from_copylink)
+对于对齐训练导致的语言模态能力下降是指的对齐后的多模态模型mllm，对于纯语言输入的回复能力有所下降，俗称对齐税（本质上也许是另外一种灾难性遗忘）。
+对于抑制灾难性遗忘一种比较简单的方法是混入原始数据，对于多模态的语言能力丢失，则是混入语言数据。这就迎来了另外一个问题，混入哪些语言数据，占比又是多少，这不是本文的重点，笔者亦无力解决这个问题。
+但是对于应用来说，mllm并不需要十项全能的语言能力，更多的是在有优秀的多模态能力下保持基础问答以及某一个领域的专业的回复能力。
+
+## 4g显存玩转rag
+![alt text](./4G_memory_rag/image.png)
+![alt text](./4G_memory_rag/image1.png)
+这个没什么好解释的，可以在极低显存下运行rag，
+### 使用教程：
+教程自取[RAG](https://modelbest.feishu.cn/wiki/G5NlwYGGAiJWGmkCc4NcQ3sAnms?from=from_copylink)
+
+## MiniCPMV2.6的awq量化
+由于bnb量化的minicpmv2.6无法用vllm加载，因此适配了autoawq，目前已经向autoawq提了pr，等合并后可以直接使用。
+
+### 使用教程：
+使用方法如下：
+
+1. 获取个人autoawq分支
+```bash
+git clone https://github.com/LDLINGLINGLING/AutoAWQ
+cd AutoAWQ
+pip install e .
+```
+2. 将MiniCPM_Series_Tutorial/MiniCPMV2_6_awq/modeling_minicpmv.py文件替换掉minicpmv2.6模型保存路径下的同名文件
+3. 修改MiniCPM_Series_Tutorial/MiniCPMV2_6_awq/quantize.py中的model_path为你minicpmv2.6的保存路径。
+4. 运行quantize.py
+
+获得minicpmv2.6的awq模型后可以使用原来的vllm进行部署，部署方式完全相同,模型从16g显存将为7g显存
+![alt text](./MiniCPMV2_6_awq/image.png)
