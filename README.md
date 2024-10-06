@@ -17,7 +17,8 @@
 (![alt text](./OCR_Multimodal_Search/asset/image-1.png))
 3. 得到与query最相近的图片。
 (![alt text](./OCR_Multimodal_Search/asset/image-3.png))
-
+4. 实验结果：
+   300条验证集图文对，Top1匹配正确率高达96%。
 ### 使用教程
 见[飞书文档](https://modelbest.feishu.cn/docx/CGEzdu25MoXkoVx3Qoac0e25nvg?from=from_copylink)
 
