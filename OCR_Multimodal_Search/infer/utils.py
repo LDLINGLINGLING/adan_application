@@ -8,12 +8,12 @@ def evaluate_colbert( qs, ps, batch_size=128) -> torch.Tensor:
         qs_batch = torch.nn.utils.rnn.pad_sequence(qs[i : i + batch_size], batch_first=True, padding_value=0).to(
             "cuda"
         )
-        qs_batch = F.normalize(qs_batch, p=2, dim=-1)
+        #qs_batch = F.normalize(qs_batch, p=2, dim=-1)
         for j in range(0, len(ps), batch_size):
             ps_batch = torch.nn.utils.rnn.pad_sequence(
                 ps[j : j + batch_size], batch_first=True, padding_value=0
             ).to("cuda")
-            ps_batch = F.normalize(ps_batch, p=2, dim=-1)
+            #ps_batch = F.normalize(ps_batch, p=2, dim=-1)
             scores_batch.append(torch.einsum("bnd,csd->bcns", qs_batch, ps_batch).max(dim=3)[0].sum(dim=2))
         scores_batch = torch.cat(scores_batch, dim=1).cpu()
         scores.append(scores_batch)

@@ -91,7 +91,7 @@ device = model.device
 mock_image = Image.new("RGB", (448, 448), (255, 255, 255))
 
 with gr.Blocks() as demo:
-    gr.Markdown("# ColCPM-V: Cross-modal HD retrieval ")
+    gr.Markdown("# ColPali: Efficient Document Retrieval with Vision Language Models 📚🔍")
     gr.Markdown("## 1️⃣ Upload PDFs")
     file = gr.File(file_types=["pdf","json",'jpg','png'], file_count="multiple")
 

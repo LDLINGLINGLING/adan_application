@@ -9,10 +9,12 @@ from transformers import AutoModel,AutoTokenizer
 from peft import PeftModel
 from utils import build_transform,evaluate_colbert
 from dataset import ImageDataset,QueryDataset,load_from_pdf,data_collator,data_collator_query,load_from_json
+import torch.nn.functional as F
+
 def main() -> None:
     # Load model and lora
     model_name = "/root/ld/ld_model_pretrained/minicpm-v"
-    lora_path = "/root/ld/ld_project/pull_request/MiniCPM-V/finetune/output/output__lora/checkpoint-2000"
+    lora_path = "/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/OCR_Multimodal_Search/finetune/output/output_lora/checkpoint-560"
     model = AutoModel.from_pretrained(model_name, torch_dtype=torch.float16, device_map="cuda",trust_remote_code=True).eval()
     model = PeftModel.from_pretrained(model, lora_path)
     tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code=True)
@@ -27,8 +29,8 @@ def main() -> None:
 
     # select images -> load_from_pdf(<pdf_path>),  load_from_image_urls(["<url_1>"]), load_from_dataset(<path>)
     
-    images = load_from_json("/root/ld/ld_dataset/pdf_cn_30k_search_eval1.json")[0][:30]
-    queries = load_from_json('/root/ld/ld_dataset/pdf_cn_30k_search_eval1.json')[1][:30]
+    images = load_from_json("/root/ld/ld_dataset/pdf_cn_30k_search_eval.json")[0]
+    queries = load_from_json('/root/ld/ld_dataset/pdf_cn_30k_search_eval.json')[1]
     if hasattr(model.config, "slice_config"):
         slice_config = model.config.slice_config.to_dict()
     else:
@@ -49,6 +51,7 @@ def main() -> None:
         with torch.no_grad():
             embeddings_doc = model.base_model(data = batch_doc, use_cache=False).half()
             embeddings_doc = model.text_proj(embeddings_doc)
+            embeddings_doc=F.normalize(embeddings_doc, p=2, dim=-1)
         ds.extend(list(torch.unbind(embeddings_doc.to("cpu"))))
     del embeddings_doc
     # run inference - queries
@@ -65,12 +68,13 @@ def main() -> None:
             batch_query=batch_query.to("cuda")
             embeddings_query = model.base_model(data = batch_query, use_cache=False).half()
             embeddings_query = model.text_proj(embeddings_query)
+            embeddings_query = F.normalize(embeddings_query, p=2, dim=-1)
         qs.extend(list(torch.unbind(embeddings_query.to("cpu"))))
 
     # run evaluation
-    scores = evaluate_colbert(qs, ds)
+    scores = evaluate_colbert(qs, ds,batch_size=30)
     print(scores)
     print(scores.argmax(axis=1))
-
+    print('共{}图文对待匹配,R1正确匹配数量{}'.format(scores.shape[0],torch.sum(scores.argmax(axis=1)==torch.arange(300))))
 if __name__ == "__main__":
     typer.run(main)

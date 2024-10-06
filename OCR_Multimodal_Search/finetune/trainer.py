@@ -117,14 +117,12 @@ class CPMTrainer(Trainer):
                 outputs = self.model.base_model(data = inputs['query_ids'], use_cache=False)
                 query_embeddings=outputs.half()
                 self.model.text_proj = self.model.text_proj.half()
-                logger.info(f"query_embeddings.dtype:{query_embeddings.dtype}")
+                #logger.info(f"query_embeddings.dtype:{query_embeddings.dtype}")
                 # logger.info(f"doc_embeddings.dtype:{doc_embeddings.dtype}")
                 query_embeddings=self.model.text_proj(query_embeddings)
                 doc_embeddings = self.model.base_model(data = inputs, use_cache=False).half()
                 doc_embeddings=self.model.text_proj(doc_embeddings)
-        logger.info(f"outputs.shape:{outputs.shape}")
-        logger.info(f"query_embeddings_shape：{query_embeddings.shape}")
-        logger.info(f"doc_embeddings_shape:{doc_embeddings.shape}")
+  
 
         # Compute the ColBERT scores
         # 计算得分

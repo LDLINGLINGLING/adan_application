@@ -339,7 +339,7 @@ def preprocess(
     single image preprocess, the image will be placed at the top of the conversation
     """
     conversation = copy.deepcopy(conversation)
-    assert len(conversation) > 1, "conversation length must large than 2"
+#    assert len(conversation) > 1, "conversation length must large than 2"
     assert conversation[0]["role"] == "user", "the first role must be user"
 
     if slice_config is not None:

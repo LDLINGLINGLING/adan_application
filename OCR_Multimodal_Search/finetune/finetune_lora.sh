@@ -9,8 +9,8 @@ MASTER_PORT=6001
 MODEL="/root/ld/ld_model_pretrained/minicpm-v" # or openbmb/MiniCPM-V-2, openbmb/MiniCPM-Llama3-V-2_5
 # ATTENTION: specify the path to your training data, which should be a json file consisting of a list of conversations.
 # See the section for finetuning in README for more information.
-DATA="/root/ld/ld_dataset/pdf_cn_30k_search_train1.json"
-EVAL_DATA="/root/ld/ld_dataset/pdf_cn_30k_search_eval1.json"
+DATA="/root/ld/ld_dataset/pdf_cn_30k_search_train.json"
+EVAL_DATA="/root/ld/ld_dataset/pdf_cn_30k_search_eval.json"
 LLM_TYPE="minicpm" 
 
 export NCCL_P2P_DISABLE=1
@@ -43,8 +43,8 @@ torchrun $DISTRIBUTED_ARGS finetune.py  \
     --use_lora true \
     --model_max_length 700 \
     --max_slice_nums 9 \
-    --max_steps 10000 \
-    --eval_steps 1000 \
+    --max_steps 600 \
+    --eval_steps 600 \
     --output_dir output/output_lora \
     --logging_dir output/output_lora \
     --logging_strategy "steps" \
@@ -53,8 +53,8 @@ torchrun $DISTRIBUTED_ARGS finetune.py  \
     --gradient_accumulation_steps 4 \
     --evaluation_strategy "steps" \
     --save_strategy "steps" \
-    --save_steps 1000 \
-    --save_total_limit 10 \
+    --save_steps 80 \
+    --save_total_limit 3 \
     --learning_rate 1e-4 \
     --weight_decay 0.1 \
     --adam_beta2 0.95 \
