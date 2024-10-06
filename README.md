@@ -4,9 +4,7 @@
 ## OCR_VG
 同时将OCR和定位任务融合，考虑排版问题，该项目在OCR_VG的文件夹下，在可以自取[文字识别与定位教程](https://modelbest.feishu.cn/wiki/HLRiwNgKEic6cckGyGucFvxQnJw?from=from_copylink)。
 ### 项目效果
-识别和定位计算机文字：
 ![alt text](./OCR_VG/out/1.jpg)
-仅识别和定位手写文字：
 ![alt text](./OCR_VG/out/4.jpg)
 
 ## 基于MiniCPMV2.0的跨模态搜索
