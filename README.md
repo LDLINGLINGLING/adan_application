@@ -116,7 +116,7 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
 由于bnb量化的minicpmv2.6无法用vllm加载，因此适配了autoawq，目前已经向autoawq提了pr，等合并后可以直接使用。
 
 ### 使用教程
-
+[飞书教程地址](https://modelbest.feishu.cn/wiki/PAsHw6N6xiEy0DkJWpJcIocRnz9?from=from_copylink)
 使用方法如下：
 
 1. 获取个人autoawq分支
