@@ -16,10 +16,7 @@
 
 ### 项目效果
 
-<div align="center">
-  <img src="./OCR_VG/out/1.jpg" alt="项目效果1" width="500"/>
-  <img src="./OCR_VG/out/4.jpg" alt="项目效果2" width="500"/>
-</div>
+<div align="center"> <img src="./OCR_VG/out/1.jpg" alt="项目效果1" width="500"/> <br /> <img src="./OCR_VG/out/4.jpg" alt="项目效果2" width="500"/> </div>
 
 ## 基于MiniCPMV2.0的跨模态搜索
 
