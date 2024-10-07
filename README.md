@@ -64,7 +64,7 @@
    </div>
 4. 获得最终答案
    <div align="center">
-     <a src="./agent_auto_plan/asset/image-4.png">[查看最终答案]</a>
+      <img src="./agent_auto_plan/asset/image-4.png" alt="最终结果" width="500"/>
    </div>
 
 ### 使用教程
