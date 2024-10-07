@@ -51,20 +51,20 @@
 
 1. 输入query:
    <div align="center">
-     <img src="./agent_auto_plan/asset/image.png" alt="输入query" width="500"/>
+     <img src="./agent_auto_plan/asset/image.png" alt="输入query" width="1000"/>
    </div>
 2. 获得任务分解
    <div align="center">
-     <img src="./agent_auto_plan/asset/image-1.png" alt="任务分解" width="500"/>
+     <img src="./agent_auto_plan/asset/image-1.png" alt="任务分解" width="1000"/>
    </div>
 3. 获得任务执行
    <div align="center">
-     <img src="./agent_auto_plan/asset/image-2.png" alt="任务执行1" width="500"/>
-     <img src="./agent_auto_plan/asset/image-3.png" alt="任务执行2" width="500"/>
+     <img src="./agent_auto_plan/asset/image-2.png" alt="任务执行1" width="1000"/>
+     <img src="./agent_auto_plan/asset/image-3.png" alt="任务执行2" width="1000"/>
    </div>
 4. 获得最终答案
    <div align="center">
-      <img src="./agent_auto_plan/asset/image-4.png" alt="最终结果" width="500"/>
+      <img src="./agent_auto_plan/asset/image-4.png" alt="最终结果" width="1000"/>
    </div>
 
 ### 使用教程
