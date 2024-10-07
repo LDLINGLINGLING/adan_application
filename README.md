@@ -26,15 +26,15 @@
 
 1. 输入20张待选图片：
    <div align="center">
-     <img src="./OCR_Multimodal_Search/asset/image-2.png" alt="待选图片" width="500"/>
+     <img src="./OCR_Multimodal_Search/asset/image-2.png" alt="待选图片" width="800"/>
    </div>
 2. 输入query文字进行搜索:
    <div align="center">
-     <img src="./OCR_Multimodal_Search/asset/image-1.png" alt="查询文字" width="500"/>
+     <img src="./OCR_Multimodal_Search/asset/image-1.png" alt="查询文字" width="800"/>
    </div>
 3. 得到与query最相近的图片。
    <div align="center">
-     <img src="./OCR_Multimodal_Search/asset/image-3.png" alt="最相近图片" width="500"/>
+     <img src="./OCR_Multimodal_Search/asset/image-3.png" alt="最相近图片" width="800"/>
    </div>
 4. 实验结果：
    300条验证集图文对，Top1匹配正确率高达96%。
@@ -64,7 +64,7 @@
    </div>
 4. 获得最终答案
    <div align="center">
-      <img src="./agent_auto_plan/asset/image-4.png" alt="最终结果" width="600"/>
+      <img src="./agent_auto_plan/asset/image-4.png" alt="最终结果" width="400"/>
    </div>
 
 ### 使用教程
