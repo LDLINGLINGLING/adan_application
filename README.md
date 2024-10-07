@@ -101,8 +101,8 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
 ## 4G显存玩转RAG
 
 <div align="center">
-  <img src="./4G_memory_rag/image.png" alt="4G显存RAG1" width="500"/>
-  <img src="./4G_memory_rag/image1.png" alt="4G显存RAG2" width="500"/>
+  <img src="./4G_memory_rag/image.png" alt="4G显存RAG1" width="600"/>
+  <img src="./4G_memory_rag/image1.png" alt="4G显存RAG2" width="600"/>
 </div>
 
 这个没什么好解释的，可以在极低显存下运行RAG，
