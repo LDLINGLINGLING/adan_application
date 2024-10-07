@@ -82,10 +82,10 @@
 ### 效果展示
 
 <div align="center">
-  <img src="./mbti_role_play/demo_img/ESTP.PNG" alt="ESTP人格" width="500"/>
-  <img src="./mbti_role_play/demo_img/INTJ.PNG" alt="INTJ人格" width="500"/>
-  <img src="./mbti_role_play/demo_img/ESTP1.PNG" alt="ESTP人格1" width="500"/>
-  <img src="./mbti_role_play/demo_img/INTJ1.PNG" alt="INTJ人格1" width="500"/>
+  <img src="./mbti_role_play/demo_img/ESTP.PNG" alt="ESTP人格" width="800"/>
+  <img src="./mbti_role_play/demo_img/INTJ.PNG" alt="INTJ人格" width="800"/>
+  <img src="./mbti_role_play/demo_img/ESTP1.PNG" alt="ESTP人格1" width="800"/>
+  <img src="./mbti_role_play/demo_img/INTJ1.PNG" alt="INTJ人格1" width="800"/>
 </div>
 
 ## 混合模态微调
