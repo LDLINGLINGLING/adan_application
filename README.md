@@ -123,6 +123,7 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
    ```bash
    git clone https://github.com/LDLINGLINGLING/AutoAWQ
    cd AutoAWQ
+   git checkout minicpmv2.6
    pip install e .
    ```
 2. 将MiniCPM_Series_Tutorial/MiniCPMV2_6_awq/modeling_minicpmv.py文件替换掉minicpmv2.6模型保存路径下的同名文件
