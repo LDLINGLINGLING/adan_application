@@ -72,7 +72,7 @@ def function_call(plugin_name, plugin_args):
                     return '{}的{}属性不存在'.format(weapon_name,attribute)
         return kg
 
-gen_batch = 5
+nums_per_tool = 20
 model_path = "/root/ld/ld_model_pretrained/Qwen2.5-72B-Instruct-GPTQ-Int4"
 save_question_json = '/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/question_react.json'
 save_react_qa_json = '/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/react_qa_react.json'
@@ -140,7 +140,7 @@ for tool in tools:
         output=outputs[0].outputs[0].text
         questions.extend(get_answer_from_output(output))
         
-        if len(questions)>=gen_batch:
+        if len(questions)>=nums_per_tool:
             all_questions.extend(questions)
             print(questions)
             questinos_dict[tool['name_for_model']] = questions
