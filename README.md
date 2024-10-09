@@ -7,7 +7,7 @@
 - [混合模态微调](#混合模态微调)
 - [4G显存玩转RAG](#4g显存玩转rag)
 - [MiniCPMV2.6的AWQ量化](#minicpmv26的awq量化)
-- [buil your agent data](#冷启动获取Agent数据)
+- [Buil Your Agent Data](#冷启动获取Agent数据)
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
