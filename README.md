@@ -4,7 +4,7 @@
 - [基于MiniCPMV2.0的跨模态搜索](#基于minicpmv20的跨模态搜索)
 - [复杂agent项目](#复杂agent项目)
 - [MBTI角色扮演](#mbti角色扮演)
-- [混合模态微调](#混合模态微调)
+- [MiniCPMV混合模态微调](#混合模态微调)
 - [4G显存玩转RAG](#4g显存玩转rag)
 - [MiniCPMV2.6的AWQ量化](#minicpmv26的awq量化)
 - [Buil Your Agent Data](#冷启动获取Agent数据)
