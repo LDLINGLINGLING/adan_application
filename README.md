@@ -1,6 +1,6 @@
 # 有趣的项目
 - [English_readme](./README_en.md)
-- [OCR_VG](#ocr_vg)
+- [文字定位与识别](#ocr_vg)
 - [基于MiniCPMV2.0的跨模态搜索](#基于minicpmv20的跨模态搜索)
 - [复杂agent项目](#复杂agent项目)
 - [MBTI角色扮演](#mbti角色扮演)
