@@ -48,7 +48,10 @@
 为了快速构建Agent，搭建了大模型生成agent训练数据的工具,告别刀耕火种，节约你95%的时间。包括qwen模型(react)和minicpm两种格式生成。
 
 [零修改生成数据示例](./agent_demo/react_qa_react.json)
+
 [生成代码点击此处](./agent_demo/get_react_data.py)
+
+[使用教程](https://modelbest.feishu.cn/docx/BvNxdOtVqonNXDxgXLbceXMdnMc?from=from_copylink)
 
 ## 复杂agent项目
 
