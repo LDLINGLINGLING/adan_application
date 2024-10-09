@@ -7,6 +7,7 @@
 - [混合模态微调](#混合模态微调)
 - [4G显存玩转RAG](#4g显存玩转rag)
 - [MiniCPMV2.6的AWQ量化](#minicpmv26的awq量化)
+- [buil your agent data](#冷启动获取Agent数据)
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
@@ -42,6 +43,11 @@
 ### 使用教程
 
 见[飞书文档](https://modelbest.feishu.cn/docx/CGEzdu25MoXkoVx3Qoac0e25nvg?from=from_copylink)
+
+## 冷启动获取Agent数据
+为了快速构建Agent，搭建了大模型生成agent训练数据的工具,告别刀耕火种，节约你95%的时间。
+[代码](./agent_demo/get_react_data.py)
+
 
 ## 复杂agent项目
 
@@ -134,3 +140,5 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
 <div align="center">
   <img src="./MiniCPMV2_6_awq/image.png" alt="AWQ量化" width="500"/>
 </div>
+
+
