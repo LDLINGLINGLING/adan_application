@@ -6,8 +6,8 @@ import json5
 from transformers import AutoTokenizer
 #from agent_demo import *
 model_path = "/root/ld/ld_model_pretrained/Qwen2.5-72B-Instruct-GPTQ-Int4" # 教师模型地址
-save_question_json = '/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/question_react.json' # 保存query的json地址，不要改文件名
-save_react_qa_json = '/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/react_qa_react.json' # 保存react的json地址，不要改文件名
+save_question_json = '/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/question_react.json' # 保存query的json地址，可以改路径，不要改文件名
+save_react_qa_json = '/root/ld/ld_project/pull_request/MiniCPM_Series_Tutorial/agent_demo/react_qa_react.json' # 保存react的json地址，可以改路径，不要改文件名
 inference_batch_size = 8 # 教师模型生成数据时的batch
 gen_datas_per_tool = 10 # 每个tool生成多少条react数据
 cpm3_path = '/root/ld/ld_model_pretrained/minicpm3' # if you  want to get react data，cpm3_path can be none
