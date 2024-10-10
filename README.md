@@ -121,7 +121,7 @@
 
 ## 混合模态微调
 
-MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯文本和图文对的混合训练模式，放在了MIniCPM_Series_Tutorial/ft_language_replace_file文件夹下，
+MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯文本和图文对的混合训练模式，放在了adan_application/ft_language_replace_file文件夹下，
 
 ### 使用教程
 
