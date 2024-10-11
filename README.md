@@ -1,7 +1,7 @@
 # 有趣的项目
 - [English_readme](./README_en.md)
 - [文字定位与识别](#ocr_vg)
-- [**基于MiniCPMV2.0的跨模态搜索**](#基于MiniCPMV2.0的跨模态搜索)
+- [**基于MiniCPMV2.0的跨模态搜索**](#基于MiniCPMV2的跨模态搜索)
 - [**复杂agent项目**](#复杂agent项目)
 - [MBTI角色扮演](#mbti角色扮演)
 - [MiniCPMV混合模态微调](#混合模态微调)
@@ -19,7 +19,7 @@
 
 <div align="center"> <img src="./OCR_VG/out/1.jpg" alt="项目效果1" width="500"/> <br /> <img src="./OCR_VG/out/4.jpg" alt="项目效果2" width="500"/> </div>
 
-## 基于MiniCPMV2.0的跨模态搜索
+## 基于MiniCPMV2的跨模态搜索
 
 使用多向量和对比学习的方法，目标是训练一个跨模态端到端搜索的模型，可以理解密集文字、复杂表格。[模型地址](https://www.modelscope.cn/models/linglingdan/Minicpmv_embeding_multi_vector)
 
