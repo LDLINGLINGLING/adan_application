@@ -8,7 +8,7 @@
 - [4G显存玩转RAG](#4g显存玩转rag)
 - [MiniCPMV2.6的AWQ量化](#minicpmv26的awq量化)
 - [冷启动构造function call数据](#冷启动获取Agent数据)
-- [如何获取MiniCPMV的图像和文字嵌入向量](#冷启动获取Agent数据)
+- [如何获取MiniCPMV的图像和文字嵌入向量](#获取MiniCPMV2.6的图片和文本向量)
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
@@ -166,5 +166,90 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
 <div align="center">
   <img src="./MiniCPMV2_6_awq/image.png" alt="AWQ量化" width="500"/>
 </div>
+
+## 获取MiniCPMV2.6的图片和文本向量
+### MiniCPM-V 嵌入项目操作指南
+
+#### 1. 下载项目代码
+
+首先，你需要从GitHub上克隆 `MiniCPM-CookBook` 项目代码。
+
+```sh
+git clone https://github.com/OpenBMB/MiniCPM-CookBook
+```
+
+#### 2. 替换原始模型代码
+
+接下来，用下载的项目中的 `modeling_minicpmv.py` 文件替换本地 `MiniCPMV2.6` 模型路径下的同名文件。
+
+```sh
+cp MiniCPM-CookBook/get_minicpmv2.6_embeding/modeling_minicpmv.py /path/to/MiniCPM-V-2_6/modeling_minicpmv.py
+```
+
+请确保将 `/path/to/MiniCPMV2.6` 替换为你本地 `MiniCPMV2.6` 项目的实际路径。
+
+#### 3. 编写模型地址及其他参数
+
+修改 `MiniCPM-CookBook/get_minicpmv2.6_embeding/inference.py` 文件中的 `main` 函数来设置以下参数：
+
+```python
+def main() -> None:
+    images = ['/root/ld/ld_dataset/30k_data/60938244/42.jpg']  # 图像路径列表，例如：['/ld/image_path/1.jpg', '/ld/image_path/2.jpg']
+    queries = ['hello']  # 文本查询列表，例如：["图片中有一只黑白相间的狗", "一个孩子正在吃棒棒糖"]
+    model_name = "/root/ld/ld_model_pretrain/MiniCPM-V-2_6"  # 模型路径
+```
+
+#### 4. 运行 `inference.py` 获取嵌入向量
+
+在 `inference.py` 文件中，添加以下代码来获取图像和文本的嵌入向量：
+
+```python
+import torch
+from torch.utils.data import DataLoader
+from tqdm import tqdm
+
+def main() -> None:
+    images = ['/root/ld/ld_dataset/30k_data/60938244/42.jpg']  # 图像路径列表，例如：['/ld/image_path/1.jpg', '/ld/image_path/2.jpg']
+    queries = ['hello']  # 文本查询列表，例如：["图片中有一只黑白相间的狗", "一个孩子正在吃棒棒糖"]
+    model_name = "/root/ld/ld_model_pretrain/MiniCPM-V-2_6"  # 模型路径
+
+    # 加载模型
+    model = ...  # 根据你的模型加载方法加载模型
+    model.to("cuda")
+
+    # 图像数据加载器
+    image_dataloader = DataLoader(
+        images,
+        batch_size=1,
+        shuffle=False,
+        collate_fn=lambda x: data_collator_image(x),
+    )
+
+    # 获取图像嵌入向量
+    for batch_img in tqdm(image_dataloader):
+        batch_img = {k: (v.to("cuda") if isinstance(v, torch.Tensor) else v) for k, v in batch_img.items()}
+        with torch.no_grad():
+            embeddings_img = model.get_vllm_embedding(batch_img)  # 在这里我们获取图像向量
+            print(embeddings_img)
+
+    # 文本数据加载器
+    dataloader = DataLoader(
+        queries_dataset,
+        batch_size=1,
+        shuffle=False,
+        collate_fn=lambda x: data_collator_query(x),
+    )
+
+    # 获取文本嵌入向量
+    for batch_text in tqdm(dataloader):
+        with torch.no_grad():
+            batch_text = batch_text.to("cuda")
+            embeddings_query = model(data=batch_text, use_cache=False).logits  # 在这里我们获取文本向量
+            print(embeddings_query)
+
+if __name__ == '__main__':
+    main()
+```
+
 
 
