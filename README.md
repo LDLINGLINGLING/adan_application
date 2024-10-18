@@ -172,10 +172,10 @@ MiniCPMV的微调仅仅开放了图文双模态的训练，本项目修改了纯
 
 #### 1. 下载项目代码
 
-首先，你需要从GitHub上克隆 `MiniCPM-CookBook` 项目代码。
+首先，你需要从GitHub上克隆本项目 `adan_application` 项目代码。
 
 ```sh
-git clone https://github.com/OpenBMB/MiniCPM-CookBook
+git clone https://github.com/LDLINGLINGLING/adan_application.git
 ```
 
 #### 2. 替换原始模型代码
@@ -183,14 +183,14 @@ git clone https://github.com/OpenBMB/MiniCPM-CookBook
 接下来，用下载的项目中的 `modeling_minicpmv.py` 文件替换本地 `MiniCPMV2.6` 模型路径下的同名文件。
 
 ```sh
-cp MiniCPM-CookBook/get_minicpmv2.6_embeding/modeling_minicpmv.py /path/to/MiniCPM-V-2_6/modeling_minicpmv.py
+cp adan_application/get_minicpmv2.6_embeding/modeling_minicpmv.py /path/to/MiniCPM-V-2_6/modeling_minicpmv.py
 ```
 
 请确保将 `/path/to/MiniCPMV2.6` 替换为你本地 `MiniCPMV2.6` 项目的实际路径。
 
 #### 3. 编写模型地址及其他参数
 
-修改 `MiniCPM-CookBook/get_minicpmv2.6_embeding/inference.py` 文件中的 `main` 函数来设置以下参数：
+修改 `adan_application/get_minicpmv2.6_embeding/inference.py` 文件中的 `main` 函数来设置以下参数：
 
 ```python
 def main() -> None:
