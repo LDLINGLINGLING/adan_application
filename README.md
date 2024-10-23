@@ -26,7 +26,7 @@
 
 ### 效果展示：
 
-1. 输入20张待选图片：
+1. 输入待选图片：
    <div align="center">
      <img src="./OCR_Multimodal_Search/asset/image-2.png" alt="待选图片" width="800"/>
    </div>
