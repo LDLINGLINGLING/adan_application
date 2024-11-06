@@ -1,6 +1,5 @@
 # 有趣的项目
 - [English_readme](./README_en.md)
-- [文字定位与识别](#ocr_vg)
 - [**基于MiniCPMV2.0的跨模态搜索**](#基于MiniCPMV2的跨模态搜索)
 - [**冷启动构造function call数据**](#冷启动获取Agent数据)
 - [**AutoPlan 复杂agent**](#复杂agent项目)
@@ -10,6 +9,8 @@
 - [4G显存玩转RAG](#4g显存玩转rag)
 - [MiniCPMV2.6的AWQ量化](#minicpmv26的awq量化)
 - [如何获取MiniCPMV的图像和文字嵌入向量](#获取MiniCPMV的图片和文本向量)
+- [文字定位与识别](#ocr_vg)
+
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
