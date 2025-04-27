@@ -255,7 +255,7 @@ if __name__ == '__main__':
     main()
 ```
 
-## LegalQA: 基于RAFT框架的法律问答系统
+## RAG_Of_Law: 基于RAFT框架的法律问答系统
 
 ### 项目概述
 本项目采用RAFT(Retrieval-Augmented Fine-Tuning)技术框架，构建面向法律领域的专业问答系统。通过结合检索增强生成(RAG)和监督微调(SFT)，显著提升模型在复杂法律问题上的回答准确性和专业性。
