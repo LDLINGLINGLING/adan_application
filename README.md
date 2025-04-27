@@ -10,6 +10,7 @@
 - [MiniCPMV2.6的AWQ量化](#minicpmv26的awq量化)
 - [如何获取MiniCPMV的图像和文字嵌入向量](#获取MiniCPMV的图片和文本向量)
 - [文字定位与识别](#ocr_vg)
+- [法律问答智能助手RAFT](https://github.com/LDLINGLINGLING/rag-of-law)
 
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
@@ -252,6 +253,9 @@ def main() -> None:
 if __name__ == '__main__':
     main()
 ```
+
+## 法律问答助手的RAFT
+
 
 
 
