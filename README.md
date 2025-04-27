@@ -277,9 +277,6 @@ GitHub地址: [https://github.com/LDLINGLINGLING/rag-of-law](https://github.com/
 #### 2. 语义检索模型
 - 对比学习训练
 - BM25混合检索
-- 关键指标：
-  - Recall@5: 93%
-  - mAP: 89%
 
 #### 3. 生成模型
 - 抗噪声输入设计
