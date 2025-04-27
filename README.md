@@ -11,6 +11,7 @@
 - [如何获取MiniCPMV的图像和文字嵌入向量](#获取MiniCPMV的图片和文本向量)
 - [文字定位与识别](#ocr_vg)
 - [法律问答智能助手RAFT](https://github.com/LDLINGLINGLING/rag-of-law)
+- [定制具有特定风格的聊天机器人](https://github.com/LDLINGLINGLING/Style-ChatBot)
 
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
