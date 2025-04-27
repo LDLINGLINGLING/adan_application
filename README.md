@@ -1,4 +1,4 @@
-# 有趣的项目
+# 有趣的大模型项目
 - [English_readme](./README_en.md)
 - [**基于MiniCPMV2.0的跨模态搜索**](#基于MiniCPMV2的跨模态搜索)
 - [**冷启动构造function call数据**](#冷启动获取Agent数据)
