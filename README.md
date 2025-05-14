@@ -303,7 +303,7 @@ GitHub地址: [https://github.com/LDLINGLINGLING/rag-of-law](https://github.com/
   ]
 }
 ```
-## 构建具有特定风格的聊天机器人(https://github.com/LDLINGLINGLING/Style-ChatBot)
+## [构建具有特定风格的聊天机器人](https://github.com/LDLINGLINGLING/Style-ChatBot)
 本项目在于构建垂直领域的聊天机器人
 ###  项目目标：
 1. 构造一个大学生心理咨询机器人。
