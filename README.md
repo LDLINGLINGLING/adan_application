@@ -12,7 +12,7 @@
 - [文字定位与识别](#ocr_vg)
 - [法律问答智能助手RAFT](https://github.com/LDLINGLINGLING/rag-of-law)
 - [定制具有特定风格的聊天机器人](https://github.com/LDLINGLINGLING/Style-ChatBot)
-
+- [带有交叉熵的正则化DPO训练](#带有交叉熵的正则化DPO训练)
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
@@ -319,4 +319,38 @@ GitHub地址: [https://github.com/LDLINGLINGLING/rag-of-law](https://github.com/
 5. 书写prompt填写通用要求，比如：耐心、共情、主动提问、适当关心等等。
 6. 随机选择话题场景、背景、真实数据集、轮数、单轮字数范围，并且加上Prompt构造多轮对话数据
 
-
+## [带有交叉熵的正则化DPO训练]
+由于SFT训练过程中可以认为仅存在正样本，也就是大人（训练数据）只能教会小孩（模型）能做什么，但是不能教会他不能做什么。
+DPO可以教会模型不能做什么，对于解决一些恶劣的badcase有奇效，但是可能存在的问题是在SFT后进行dpo训练将会导致SFT训练过程中获得的知识以及风格遗忘。
+本项目的做法在于DPO过程中增加SFT损失作为正则项，减少DPO对齐过程中结果的遗忘问题。
+### 使用方法
+1. git clone https://github.com/LDLINGLINGLING/adan_application.git
+2. cd sft_dpo_trainer
+3. 修改sft_dpo.sh，并且运行训练
+、、、
+#!/bin/bash
+python finetune_dpo_trainer.py \
+    --model_name_or_path "/root/autodl-tmp/MiniCPM3-4B" \  # 预训练模型的路径
+    --train_data_path "/root/autodl-tmp/dpo_train_data.json" \  # 训练数据路径（JSON格式）
+    --eval_data_path "/root/autodl-tmp/dpo_train_data.json" \  # 验证数据路径（JSON格式）
+    --output_dir "./output_dpo_sft" \  # 模型输出目录
+    --num_train_epochs 3 \  # 训练轮数
+    --per_device_train_batch_size 1 \  # 每个设备的训练批次大小
+    --per_device_eval_batch_size 1 \  # 每个设备的验证批次大小
+    --gradient_accumulation_steps 8 \  # 梯度累积步数（模拟更大的batch size）
+    --learning_rate 5e-6 \  # 学习率
+    --weight_decay 0.01 \  # 权重衰减（L2正则化）
+    --warmup_steps 100 \  # 学习率预热步数
+    --logging_steps 10 \  # 日志记录步数
+    --save_steps 500 \  # 模型保存步数
+    --eval_steps 500 \  # 验证步数
+    --model_max_length 512 \  # 模型输入的最大长度
+    --use_lora True \  # 是否使用LoRA（低秩适应）微调
+    --bf16 True \  # 是否使用bfloat16混合精度训练
+    --gradient_checkpointing True \  # 是否启用梯度检查点（节省显存）
+    --dataloader_num_workers 4 \  # 数据加载的线程数
+    --remove_unused_columns False \  # 是否移除未使用的列（通常设为False）
+    --use_dpo True \  # 是否启用DPO训练
+    --dpo_beta 0.1 \  # DPO的beta参数（控制KL散度的权重）
+    --sft_loss_weight 0.5  # 监督微调（SFT）损失的权重
+、、、
