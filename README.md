@@ -327,7 +327,7 @@ DPO可以教会模型不能做什么，对于解决一些恶劣的badcase有奇�
 1. git clone https://github.com/LDLINGLINGLING/adan_application.git
 2. cd sft_dpo_trainer
 3. 修改sft_dpo.sh，并且运行训练
-、、、bash
+```bash
 #!/bin/bash
 python finetune_dpo_trainer.py \
     --model_name_or_path "/root/autodl-tmp/MiniCPM3-4B" \  # 预训练模型的路径
@@ -353,4 +353,4 @@ python finetune_dpo_trainer.py \
     --use_dpo True \  # 是否启用DPO训练
     --dpo_beta 0.1 \  # DPO的beta参数（控制KL散度的权重）
     --sft_loss_weight 0.5  # 监督微调（SFT）损失的权重
-、、、
+```
