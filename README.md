@@ -321,7 +321,9 @@ GitHub地址: [https://github.com/LDLINGLINGLING/rag-of-law](https://github.com/
 
 ## [带有交叉熵的正则化DPO训练]
 由于SFT训练过程中可以认为仅存在正样本，也就是大人（训练数据）只能教会小孩（模型）能做什么，但是不能教会他不能做什么。
+
 DPO可以教会模型不能做什么，对于解决一些恶劣的badcase有奇效，但是可能存在的问题是在SFT后进行dpo训练将会导致SFT训练过程中获得的知识以及风格遗忘。
+
 本项目的做法在于DPO过程中增加SFT损失作为正则项，减少DPO对齐过程中结果的遗忘问题。
 ### 使用方法
 1. git clone https://github.com/LDLINGLINGLING/adan_application.git
