@@ -327,7 +327,7 @@ DPO可以教会模型不能做什么，对于解决一些恶劣的badcase有奇�
 1. git clone https://github.com/LDLINGLINGLING/adan_application.git
 2. cd sft_dpo_trainer
 3. 修改sft_dpo.sh，并且运行训练
-、、、
+、、、bash
 #!/bin/bash
 python finetune_dpo_trainer.py \
     --model_name_or_path "/root/autodl-tmp/MiniCPM3-4B" \  # 预训练模型的路径
