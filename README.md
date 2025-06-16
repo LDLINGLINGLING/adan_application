@@ -13,6 +13,7 @@
 - [法律问答智能助手RAFT](https://github.com/LDLINGLINGLING/rag-of-law)
 - [定制具有特定风格的聊天机器人](https://github.com/LDLINGLINGLING/Style-ChatBot)
 - [带有交叉熵的正则化DPO训练](#带有交叉熵的正则化DPO训练)
+- [为MiniCPM4适配了EAGLE3的投机解码模型](https://github.com/LDLINGLINGLING/Eagle3_for_MiniCPM4)
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
@@ -356,3 +357,30 @@ python finetune_dpo_trainer.py \
     --dpo_beta 0.1 \  # DPO的beta参数（控制KL散度的权重）
     --sft_loss_weight 0.5  # 监督微调（SFT）损失的权重
 ```
+
+## [为MiniCPM4适配了EAGLE3的投机解码模型](https://github.com/LDLINGLINGLING/Eagle3_for_MiniCPM4)
+EAGLE（Extrapolation Algorithm for Greater Language-model Efficiency）是一种创新的推测解码方法，通过训练轻量级的草稿模型来预测目标模型的下一个token，从而显著提升大语言模型的推理速度。 本项目为MiniCPM4适配EAGLE3的投机解码模型。
+### 在14000条alpaca上训练的测试结果如下
+、、、python
+位置 0:
+  准确率: 0.4805 ± 0.0758
+  损失:   0.8946 ± 0.3383
+位置 1:
+  准确率: 0.4872 ± 0.0764
+  损失:   0.8844 ± 0.3379
+位置 2:
+  准确率: 0.4868 ± 0.0803
+  损失:   0.8839 ± 0.3390
+位置 3:
+  准确率: 0.4840 ± 0.0815
+  损失:   0.8884 ± 0.3411
+位置 4:
+  准确率: 0.4809 ± 0.0818
+  损失:   0.8935 ± 0.3434
+位置 5:
+  准确率: 0.4734 ± 0.0815
+  损失:   0.9006 ± 0.3467
+位置 6:
+  准确率: 0.4679 ± 0.0789
+  损失:   0.9093 ± 0.3490
+  、、、
