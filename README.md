@@ -376,6 +376,6 @@ EAGLE（Extrapolation Algorithm for Greater Language-model Efficiency）是一�
 ## [为MiniCPM4适配了ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
 ParetoQ是Meta开源的最新的低比特QAT训练项目，大幅刷新了4bit以下的模型SOTA效果。（分组量化正在路上）
 以下是ParetoQ的实验效果：
-[image](https://github.com/user-attachments/assets/13d16d87-f273-4a18-bcce-f83edb77e1aa)
+![image](https://github.com/user-attachments/assets/13d16d87-f273-4a18-bcce-f83edb77e1aa)
 
 
