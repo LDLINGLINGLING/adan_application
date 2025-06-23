@@ -14,6 +14,7 @@
 - [定制具有特定风格的聊天机器人](https://github.com/LDLINGLINGLING/Style-ChatBot)
 - [带有交叉熵的正则化DPO训练](#带有交叉熵的正则化DPO训练)
 - [为MiniCPM4适配了EAGLE3的投机解码模型](https://github.com/LDLINGLINGLING/Eagle3_for_MiniCPM4)
+- [为MiniCPM4适配了ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
@@ -371,5 +372,10 @@ EAGLE（Extrapolation Algorithm for Greater Language-model Efficiency）是一�
 | 位置 4 | 48.09 | ±8.18 | 0.8935 | ±0.3434 |
 | 位置 5 | 47.34 | ±8.15 | 0.9006 | ±0.3467 |
 | 位置 6 | 46.79 | ±7.89 | 0.9093 | ±0.3490 |
+
+## [为MiniCPM4适配了ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
+ParetoQ是Meta开源的最新的低比特QAT训练项目，大幅刷新了4bit以下的模型SOTA效果。（分组量化正在路上）
+以下是ParetoQ的实验效果：
+[image](https://github.com/user-attachments/assets/13d16d87-f273-4a18-bcce-f83edb77e1aa)
 
 
