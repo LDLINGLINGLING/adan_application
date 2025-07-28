@@ -15,6 +15,8 @@
 - [带有交叉熵的正则化DPO训练](#带有交叉熵的正则化DPO训练)
 - [为MiniCPM4适配了EAGLE3的投机解码模型](https://github.com/LDLINGLINGLING/Eagle3_for_MiniCPM4)
 - [为MiniCPM4适配了ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
+- [为nano_vllm做了详细的解读](https://github.com/LDLINGLINGLING/nano_vllm_note.git)
+
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
@@ -373,9 +375,43 @@ EAGLE（Extrapolation Algorithm for Greater Language-model Efficiency）是一�
 | 位置 5 | 47.34 | ±8.15 | 0.9006 | ±0.3467 |
 | 位置 6 | 46.79 | ±7.89 | 0.9093 | ±0.3490 |
 
+
 ## [为MiniCPM4适配了ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
 ParetoQ是Meta开源的最新的低比特QAT训练项目，大幅刷新了4bit以下的模型SOTA效果。（分组量化正在路上）
 以下是ParetoQ的实验效果：
 ![image](https://github.com/user-attachments/assets/13d16d87-f273-4a18-bcce-f83edb77e1aa)
+
+## [为nano_vllm的做了详细的解读](https://github.com/LDLINGLINGLING/nano_vllm_note.git)
+nano vllm是基于vllm的核心功能复线的推理引擎，麻雀虽小，五脏俱全
+完成了page_attention、cuda-graph、请求管理、内存管理等等核心机制。
+从核心组件、核心算子、模型适配、入口函数调用逻辑四个方面讲解vllm
+```
+nano-vllm/
+├── nanovllm/
+│   ├── __init__.py          # 包导入入口
+│   ├── llm.py               # LLM主类，推理API入口
+│   ├── sampling_params.py   # 采样参数定义
+│   ├── config.py            # 配置参数定义
+│   ├── engine/#这个文件夹下都是功能文件（调度层）
+│   │   ├── llm_engine.py    # 推理主流程，API接口
+│   │   ├── model_runner.py  # 模型加载与分布式推理
+│   │   ├── scheduler.py     # 推理调度与分块分配
+│   │   ├── sequence.py      # 输入序列对象
+│   │   ├── block_manager.py # KV缓存分块管理
+│   ├── layers/#这个文件夹下都是算子文件（算子层）
+│   │   ├── linear.py        # 线性层（并行/分片等）
+│   │   ├── attention.py     # 注意力层与KV缓存写入
+│   │   ├── activation.py    # 激活值
+│   │   ├── layernorm.py     # 层归一化
+│   │   ├── linear.py        # 线性层
+│   │   ├── rotary_embedding.py # rope实现
+│   │   ├── embed_head.py。  # embed_head.py层
+│   ├── models/# 适配接口层，比如要新适配模型就在这里定义
+│   │   ├── qwen3.py         # Qwen3模型结构定义
+│   ├── utils/
+│   │   ├── context.py       # 推理上下文管理
+│   │   ├── loader.py        # 权重加载工具
+│   └── ...                  # 其他辅助模块
+```
 
 
