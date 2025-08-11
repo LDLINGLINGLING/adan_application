@@ -385,6 +385,7 @@ ParetoQ是Meta开源的最新的低比特QAT训练项目，大幅刷新了4bit�
 nano vllm是基于vllm的核心功能复线的推理引擎，麻雀虽小，五脏俱全
 完成了page_attention、cuda-graph、请求管理、内存管理等等核心机制。
 从核心组件、核心算子、模型适配、入口函数调用逻辑四个方面讲解vllm
+并且在nano_vllm上完成了对MiniCPM4的适配
 ```
 nano-vllm/
 ├── nanovllm/
