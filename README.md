@@ -15,7 +15,7 @@
 - [带有交叉熵的正则化DPO训练](#带有交叉熵的正则化DPO训练)
 - [为MiniCPM4适配了EAGLE3的投机解码模型](https://github.com/LDLINGLINGLING/Eagle3_for_MiniCPM4)
 - [为MiniCPM4适配了ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
-- [nano_vllm解读与适配](https://github.com/LDLINGLINGLING/nano_vllm_note.git)
+- [nano_vllm解读与MiniCPM适配](https://github.com/LDLINGLINGLING/nano_vllm_note.git)
 
 
 以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
