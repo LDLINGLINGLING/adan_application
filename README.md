@@ -13,8 +13,8 @@
 - [法律问答智能助手RAFT](https://github.com/LDLINGLINGLING/rag-of-law)
 - [定制具有特定风格的聊天机器人](https://github.com/LDLINGLINGLING/Style-ChatBot)
 - [带有交叉熵的正则化DPO训练](#带有交叉熵的正则化DPO训练)
-- [为MiniCPM4适配了EAGLE3的投机解码模型](https://github.com/LDLINGLINGLING/Eagle3_for_MiniCPM4)
-- [为MiniCPM4适配了ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
+- [MiniCPM4的EAGLE3的投机解码模型](https://github.com/LDLINGLINGLING/Eagle3_for_MiniCPM4)
+- [MiniCPM4的ParetoQ的QAT训练代码](https://github.com/LDLINGLINGLING/ParetoQ_for_MiniCPM4.git)
 - [nano_vllm解读与MiniCPM适配](https://github.com/LDLINGLINGLING/nano_vllm_note.git)
 
 
